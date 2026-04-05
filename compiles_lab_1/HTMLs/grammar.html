@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Грамматика</title>
+<style>
+body { font-family: Segoe UI, sans-serif; background:#f4faff; color:#003366; padding:20px; }
+h1 { color:#005599; border-bottom:2px solid #cce6ff; padding-bottom:5px; }
+code { background:#e8f3ff; padding:3px 6px; border-radius:4px; }
+pre { background:#e8f3ff; padding:10px; border-radius:6px; white-space:pre-wrap; }
+</style>
+</head>
+<body>
+
+<h1>Грамматика G[Start]</h1>
+
+<pre>
+1) &lt;Start&gt; → 'const ' &lt;val&gt;
+2) &lt;val&gt; → 'val ' &lt;id&gt;
+3) &lt;id&gt; → letter &lt;idrem&gt; | '_' &lt;idrem&gt;
+4) &lt;idrem&gt; → letter &lt;idrem&gt; | digit &lt;idrem&gt; | '_' &lt;idrem&gt; | ':' &lt;type&gt;
+5) &lt;type&gt; → 'Int' &lt;equal&gt;
+6) &lt;equal&gt; → '=' &lt;befnum&gt;
+7) &lt;befnum&gt; → '-' &lt;afterminus&gt; | nonzerodigit &lt;intrem&gt; | '0' &lt;afterzero&gt;
+8) &lt;afterminus&gt; → nonzerodigit &lt;intrem&gt;
+9) &lt;afterzero&gt; → ';'
+10) &lt;intrem&gt; → digit &lt;intrem&gt; | ';'
+11) &lt;digit&gt; → '0' | '1' | ... | '9'
+12) &lt;nonzerodigit&gt; → '1' | ... | '9'
+</pre>
+
+</body>
+</html>
