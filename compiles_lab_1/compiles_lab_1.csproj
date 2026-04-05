@@ -48,6 +48,10 @@
     <None Remove="IconsForCompiles\Open.png" />
     <None Remove="IconsForCompiles\Paste.png" />
     <None Remove="IconsForCompiles\Play.png" />
+    <None Remove="IconsForCompiles\RE1.png" />
+    <None Remove="IconsForCompiles\RE2.png" />
+    <None Remove="IconsForCompiles\RE3.png" />
+    <None Remove="IconsForCompiles\RE4.png" />
     <None Remove="IconsForCompiles\Redo.png" />
     <None Remove="IconsForCompiles\Save.png" />
     <None Remove="IconsForCompiles\Undo.png" />
@@ -130,6 +134,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IconsForCompiles\Play.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IconsForCompiles\RE1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IconsForCompiles\RE2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IconsForCompiles\RE3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IconsForCompiles\RE4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IconsForCompiles\Redo.png">

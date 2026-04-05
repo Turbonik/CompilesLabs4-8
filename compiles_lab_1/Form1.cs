@@ -262,8 +262,9 @@ namespace compiles_lab_1
             resultIcons.Images.Add("error", Image.FromFile(Path.Combine(basePath, "error.png")));  
 
             tabControlResults.ImageList = resultIcons;
-            tabPageResults.ImageIndex = 0; 
+            tabPageResults.ImageIndex = 0;
 
+            richTextBox1.DetectUrls = false;
 
             TextSizeComboBox.Text = "9";
             splitContainer1.Panel1.AllowDrop = true;
