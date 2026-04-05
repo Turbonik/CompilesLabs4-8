@@ -75,7 +75,6 @@ namespace compiles_lab_1
                 e.Handled = true;
             }
         }
-
         private void ScaleUI()
         {
             float baseHeight = 720f;
@@ -98,7 +97,6 @@ namespace compiles_lab_1
             lineNumberBox.AutoSize = false;
             lineNumberBox.Multiline = true;
             lineNumberBox.WordWrap = false;
-   
 
             foreach (ToolStripItem item in toolStrip1.Items)
             {
@@ -106,6 +104,18 @@ namespace compiles_lab_1
                 item.AutoSize = false;
                 item.Width = (int)(48 * scale);
                 item.Height = (int)(48 * scale);
+
+                if (item is ToolStripComboBox combo)
+                {
+                    combo.Font = new Font(combo.Font.FontFamily, 10 * scale);
+                    combo.Size = new Size((int)(140 * scale), (int)(32 * scale));
+                    combo.DropDownWidth = (int)(200 * scale);
+                }
+
+                if (item is ToolStripLabel label)
+                {
+                    label.Font = new Font(label.Font.FontFamily, 10 * scale);
+                }
             }
 
             menuStrip1.AutoSize = false;
@@ -119,8 +129,8 @@ namespace compiles_lab_1
                 item.Font = new Font(item.Font.FontFamily, 9 * scale);
 
             tabControlResults.Font = new Font(tabControlResults.Font.FontFamily, 10 * scale);
- 
         }
+
 
 
 
@@ -311,7 +321,6 @@ namespace compiles_lab_1
                 if (float.TryParse(TextSizeComboBox.Text, out float size))
                    {
                     SetEditorFontSize(size);
-                    SyntaxHighlighter.Highlight(richTextBox1);
                    }
 
                 }
@@ -349,7 +358,7 @@ namespace compiles_lab_1
 
                 UpdateLineNumbers();
  
-                SyntaxHighlighter.Highlight(richTextBox1);
+               
  
                 SetScrollPos(richTextBox1.Handle, SB_VERT, scrollPos, true);
                 SendMessage(richTextBox1.Handle, WM_VSCROLL,
@@ -434,10 +443,11 @@ namespace compiles_lab_1
  
             grid.Font = new Font("Segoe UI", 10);
 
-            grid.Columns.Add("Fragment", Strings.Incfrag);
-            grid.Columns.Add("Location", Strings.Location);
-            grid.Columns.Add("Message", Strings.Description);
- 
+            grid.Columns.Add("Fragment", "Найденная подстрока");
+            grid.Columns.Add("Location", "Позиция (строка:символ)");
+            grid.Columns.Add("Length", "Длина");
+
+
             grid.CellClick += ScannerGrid_CellClick;
 
             grid.RowPrePaint += (s, e) =>
@@ -450,6 +460,19 @@ namespace compiles_lab_1
                     row.DefaultCellStyle.Font = new Font(grid.Font, FontStyle.Bold);
                 }
             };
+
+            grid.CellClick += (s, e) =>
+            {
+                if (e.RowIndex < 0) return;
+
+                var row = grid.Rows[e.RowIndex];
+                if (row.Tag is SearchResult r)
+                {
+                    ClearHighlight();
+                    HighlightMatch(r.StartIndex, r.Length);
+                }
+            };
+
 
 
             return grid;
@@ -878,49 +901,89 @@ namespace compiles_lab_1
         {
             if (currentDocument == null)
             {
-                MessageBox.Show(Strings.Run, Strings.RunHead, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tabPageResults.Text = "Результат: нет документа";
+                tabPageResults.ImageIndex = 1;
                 return;
             }
 
             string text = richTextBox1.Text;
 
-            var parseResult = Parser.Analyze(text);
-
-            FillParserErrors(parseResult);
-
-            tabControlResults.SelectedIndex = 0;
- 
-            UpdateResultTabIndicator(parseResult.Errors.Count);
-
-        }
-
-        private void FillParserErrors(ParseResult result)
-        {
-            if (currentDocument == null || currentDocument.ScannerGrid == null)
-                return;
-
-            var grid = currentDocument.ScannerGrid;
-            grid.Rows.Clear();
-
-            foreach (var err in result.Errors)
+            if (string.IsNullOrWhiteSpace(text))
             {
-                int row = grid.Rows.Add(
-                    err.Fragment,
-                    $"{Strings.LineLowered} {err.Line}, {err.StartColumn}-{err.EndColumn}",
-                    err.Message
-                );
+                currentDocument.ScannerGrid.Rows.Clear();
+                ClearHighlight();
 
-                grid.Rows[row].Tag = err;
+                tabPageResults.Text = "Результат: нет данных для поиска";
+                tabPageResults.ImageIndex = 1;
+                return;
             }
 
-            tabPageResults.Controls.Clear();
-            tabPageResults.Controls.Add(grid);
+            int selected = regexSelector.SelectedIndex;
+
+            string pattern = null;
+            AutomatonSearcher automaton = null;
+
+            switch (selected)
+            {
+                case 0:
+                    pattern = RegexLibrary.CloseP;
+                    break;
+
+                case 1:
+                    pattern = RegexLibrary.SnakeCase;
+                    break;
+
+                case 2:
+                    pattern = RegexLibrary.DOI;
+                    break;
+
+                case 3:
+                    automaton = new AutomatonSearcher();
+                    break;
+
+                default:
+                    pattern = RegexLibrary.CloseP;
+                    break;
+            }
+
+            ClearHighlight();
+            currentDocument.ScannerGrid.Rows.Clear();
+
+            List<SearchResult> matches;
+ 
+            if (automaton != null)
+            {
+                matches = automaton.Find(text);
+            }
+            else
+            {
+                matches = TextAnalyzer.FindMatches(text, pattern);
+            }
+
+            if (matches.Count == 0)
+            {
+                tabPageResults.Text = "Результат: совпадений нет";
+                tabPageResults.ImageIndex = 1;
+                return;
+            }
+
+            foreach (var r in matches)
+            {
+                var row = currentDocument.ScannerGrid.Rows[
+                    currentDocument.ScannerGrid.Rows.Add(
+                        r.Fragment,
+                        $"{r.Line}:{r.Column}",
+                        r.Length.ToString()
+                    )
+                ];
+                row.Tag = r;
+            }
+
+            tabPageResults.Text = $"Результат: найдено {matches.Count}";
+            tabPageResults.ImageIndex = 0;
+
             tabControlResults.SelectedIndex = 0;
         }
-
-
-
-
 
 
         private void ScannerGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -984,22 +1047,28 @@ namespace compiles_lab_1
 
 
 
-        private void UpdateResultTabIndicator(int errorCount)
+
+        private void HighlightMatch(int start, int length)
+        { 
+            richTextBox1.Select(start, length);
+            richTextBox1.SelectionBackColor = Color.Yellow;
+            richTextBox1.ScrollToCaret();
+ 
+            richTextBox1.Select(start + length, 0);
+            richTextBox1.SelectionBackColor = richTextBox1.BackColor;
+        }
+
+
+
+        private void ClearHighlight()
         {
-            if (errorCount == 0)
-            {
-                tabPageResults.ImageIndex = 0; 
-                tabPageResults.Text = $"{Strings.Result} — {Strings.Nomistakes}";
-            }
-            else
-            {
-                tabPageResults.ImageIndex = 1;  
+            int selStart = richTextBox1.SelectionStart;
+            int selLength = richTextBox1.SelectionLength;
 
-                string word = errorCount == 1 ? Strings.Mistake1 :
-                              errorCount < 5 ? Strings.Mistake2 : Strings.Mistake3;
+            richTextBox1.SelectAll();
+            richTextBox1.SelectionBackColor = Color.White;
 
-                tabPageResults.Text = $"{Strings.Result} — {errorCount} {word}";
-            }
+            richTextBox1.Select(selStart, selLength);
         }
 
 

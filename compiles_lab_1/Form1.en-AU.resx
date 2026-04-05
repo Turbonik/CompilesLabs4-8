@@ -118,208 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lineNumberBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 180</value>
-  </data>
-  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 180</value>
-  </data>
-  <data name="splitContainerLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 180</value>
-  </data>
-  <data name="tabControlResults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 174</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 360</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>180</value>
-  </data>
-  <data name="tabPageResults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>786, 141</value>
-  </data>
-  <data name="tabPageResults.Text" xml:space="preserve">
-    <value>Results</value>
-  </data>
-  <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 24</value>
-  </data>
-  <data name="fileMenu.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="CreateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
-  <data name="CreateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Create</value>
-  </data>
-  <data name="OpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
-  <data name="OpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
-  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="SaveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
-  <data name="SaveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save as</value>
-  </data>
-  <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
-  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="editMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
-  </data>
-  <data name="editMenu.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="CancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="CancelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="RepeatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="RepeatToolStripMenuItem.Text" xml:space="preserve">
-    <value>Redo</value>
-  </data>
-  <data name="CutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="CutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cut</value>
-  </data>
-  <data name="CopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="CopyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="PasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="PasteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Paste</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="HighlightAllВсеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
-  </data>
-  <data name="HighlightAllВсеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Highlight all</value>
-  </data>
-  <data name="textMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 24</value>
-  </data>
-  <data name="textMenu.Text" xml:space="preserve">
-    <value>Text</value>
-  </data>
-  <data name="TaskToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="TaskToolStripMenuItem.Text" xml:space="preserve">
-    <value>Task Description</value>
-  </data>
-  <data name="GrammarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="GrammarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Grammar</value>
-  </data>
-  <data name="ClassificationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="ClassificationToolStripMenuItem.Text" xml:space="preserve">
-    <value>Grammar Classification</value>
-  </data>
-  <data name="AnalysisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="AnalysisToolStripMenuItem.Text" xml:space="preserve">
-    <value>Analysis Method</value>
-  </data>
-  <data name="ExampleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="ExampleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Test Example</value>
-  </data>
-  <data name="SourceListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="SourceListToolStripMenuItem.Text" xml:space="preserve">
-    <value>References</value>
-  </data>
-  <data name="CodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
-  </data>
-  <data name="CodeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Source Code</value>
-  </data>
-  <data name="runMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
-  </data>
-  <data name="runMenu.Text" xml:space="preserve">
-    <value>Run</value>
-  </data>
-  <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 24</value>
-  </data>
-  <data name="helpMenu.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="CallHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
-  </data>
-  <data name="CallHelpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Help</value>
-  </data>
-  <data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
-  </data>
-  <data name="AboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="localizationMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
-  </data>
-  <data name="localizationMenu.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="viewMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 24</value>
-  </data>
-  <data name="viewMenu.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="TextSizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 26</value>
-  </data>
-  <data name="TextSizeMenuItem.Text" xml:space="preserve">
-    <value>Text size</value>
-  </data>
-  <data name="searchSubstringsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search substrings</value>
-  </data>
   <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -333,9 +131,6 @@
         WCSjxODS73zkHPLvhYlLz57CBIJyiZXtgLF9WoHSbCKsTDE1ZqCNbTLAsmO1tbtwwebgAUWmznSYWcvz
         DlINu3264Tyi1A+7IK/164JV1wAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="toolStripButton2.ToolTipText" xml:space="preserve">
-    <value>Create</value>
   </data>
   <data name="toolStripButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -351,9 +146,6 @@
         YII=
 </value>
   </data>
-  <data name="toolStripButton3.ToolTipText" xml:space="preserve">
-    <value>Open</value>
-  </data>
   <data name="toolStripButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -368,9 +160,6 @@
         n798RToGVs9Xb9wBm2FVD2moANl7odbgBnYtb2WBCvfYNL86DsIHzz/+dO7a/Z/kYJBemDlAM3c79b2R
         hlozCkYBFDAwAACTwwYPdAeCnwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="toolStripButton4.ToolTipText" xml:space="preserve">
-    <value>Save</value>
   </data>
   <data name="toolStripButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -388,9 +177,6 @@
         YII=
 </value>
   </data>
-  <data name="toolStripButton5.ToolTipText" xml:space="preserve">
-    <value>Undo</value>
-  </data>
   <data name="toolStripButton11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -406,9 +192,6 @@
         UcBfY5WbDjUFNJgHlsuCMZNFlzVQzBMo5gkU80Nan8VoSfTSRUpiAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="toolStripButton11.ToolTipText" xml:space="preserve">
-    <value>Redo</value>
-  </data>
   <data name="toolStripButton10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -422,9 +205,6 @@
         ihYctxw1OCY6S1pD4VG08P8A3IwfiWFxdHbCY/6XfNSIwy9RxWNHGg3HN/ACT9I9SXJneAQhSfoBHiHs
         z/2tE6kAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="toolStripButton10.ToolTipText" xml:space="preserve">
-    <value>Copy</value>
   </data>
   <data name="toolStripButton9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -446,9 +226,6 @@
         yZ3jad905Hv4N7CsP0vx9umgwc9mAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="toolStripButton9.ToolTipText" xml:space="preserve">
-    <value>Cut</value>
-  </data>
   <data name="toolStripButton8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -461,9 +238,6 @@
         0HOaF7Hyl2gOkv6OZ1yXEHrZYPkaTA7ZkhB6Vr0vgp5ZoATyXJavepL90zj3BhUReM6P6/iQAAAAAElF
         TkSuQmCC
 </value>
-  </data>
-  <data name="toolStripButton8.ToolTipText" xml:space="preserve">
-    <value>Paste</value>
   </data>
   <data name="toolStripButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -482,9 +256,6 @@
         XBGO5esqKo3zNN7iV+KtEKAflnzPXBQb0/mk7Dms+sA+zW4enqK7edjw4hMzAkhbYD/K0NCzoc/aS6xz
         oYMnITiboF8DXwALEtkaIsvwGC/AfGmyT/hEOr+PL/ORomwBM5pxS/eq5LQAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="toolStripButton7.ToolTipText" xml:space="preserve">
-    <value>Run</value>
   </data>
   <data name="toolStripButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -517,9 +288,6 @@
         nUQlI3H4RF9/f3tVFaJ/AT1Siit3mh7kAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="toolStripButton6.ToolTipText" xml:space="preserve">
-    <value>Help</value>
-  </data>
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -540,18 +308,6 @@
         7KU2f83mFfN+bjG9gjiR3OeoyCnkQclslMdX455PSPLdYldeUdxS01VBEeH8IjD9IY9b8hawqbCQh8xI
         f6l3qSBAVn6ASnFMsu3ihoiIzvwFfCe31XkB5hcXm99wjmUYtwDMbHhOMTWUYAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="toolStripButton1.ToolTipText" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="tabContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
-  </data>
-  <data name="tableLayoutPanelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 478</value>
-  </data>
-  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 22</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -628,8 +384,5 @@
         ABOAAAATgAAAE4AAABOAAAATgAAAE4AAABOAAAATgAAAE4AAABOAAAATgAAAEYAAAAqAAAAEgAAABIAA
         AAKAAAACQAAAApAAAAGQAAAByAAAIdL//ok=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Text editor</value>
   </data>
 </root>

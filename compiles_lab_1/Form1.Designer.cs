@@ -70,6 +70,7 @@ namespace compiles_lab_1
             toolStripButton7 = new ToolStripButton();
             toolStripButton6 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
+            regexSelector = new ToolStripComboBox();
             tabsStrip = new ToolStrip();
             tabContextMenu = new ContextMenuStrip(components);
             CloseTabMenuItem = new ToolStripMenuItem();
@@ -325,7 +326,7 @@ namespace compiles_lab_1
             // 
             resources.ApplyResources(toolStrip1, "toolStrip1");
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5, toolStripButton11, toolStripButton10, toolStripButton9, toolStripButton8, toolStripButton7, toolStripButton6, toolStripButton1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5, toolStripButton11, toolStripButton10, toolStripButton9, toolStripButton8, toolStripButton7, toolStripButton6, toolStripButton1, regexSelector });
             toolStrip1.Name = "toolStrip1";
             // 
             // toolStripButton2
@@ -382,6 +383,18 @@ namespace compiles_lab_1
             // 
             resources.ApplyResources(toolStripButton1, "toolStripButton1");
             toolStripButton1.Name = "toolStripButton1";
+            // 
+            // regexSelector
+            // 
+            resources.ApplyResources(regexSelector, "regexSelector");
+            regexSelector.DropDownStyle = ComboBoxStyle.DropDownList;
+            regexSelector.Items.Clear();
+            regexSelector.Items.Add("</p>");
+            regexSelector.Items.Add("snake_case");
+            regexSelector.Items.Add("DOI");
+            regexSelector.Items.Add("граф (snake_case)\r\n");
+            regexSelector.SelectedIndex = 0;
+            regexSelector.Name = "regexSelector";
             // 
             // tabsStrip
             // 
@@ -577,5 +590,8 @@ namespace compiles_lab_1
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+
+        private ToolStripComboBox regexSelector;
+
     }
 }
