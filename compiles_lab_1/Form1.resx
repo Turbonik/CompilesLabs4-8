@@ -117,25 +117,493 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Выход</value>
+  <data name="&gt;&gt;RepeatToolStripMenuItem.Name" xml:space="preserve">
+    <value>RepeatToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;runMenu.Name" xml:space="preserve">
+    <value>runMenu</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="GrammarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
+  </data>
+  <data name="&gt;&gt;tabPageResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControlResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMain</value>
+  </data>
+  <data name="&gt;&gt;tabsStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextSizeComboBox.Items13" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CopyToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAITSURBVFhHxZa/
+        S8NAFMdTRUFQwVX8kaSBDhUdHBx18y/wHxAHF3+Am5MgioOIaJNTwcnNf8BJREGxW0cnZ7GIbe5asUjP
+        d63R+HytTWzj8Am9977vvpf05S6alPJfIYNRQgajhAw2gs74lOHwBSoXBDJYj4Ed2WUyvgvmZQBCtK5R
+        yGAt9FR+AkzvlLEH1gSFDGKSp7ITzDaAN7+5AmuDQgb9GI4YBaMMNvbA+qCQQYV2KtsNx10Fk1ds6gfX
+        BYUMgnEC7vyWMsTg2qDgQUy3xRJMXMRGdcgajF+aDme6w+eHnFyff87f+Pyhs2cdJrtAk4ehYNr8wErx
+        pN+oFpULPPI5KHTRRH+lbDpia/xQdmBTPxo8viOiuImItHWYi1PmCnX3J3RhE7H5Q9zOW+QC1KVFfwFC
+        3A/uF/rJBSia2IT1yKhdlVzAxyDMaxiUdeT5NfAIshHF7eKgzsS0wcQKjK9wnqBkHIgxz+uHuUfYrVh1
+        vGG725ArYa0HbFjnnv5bMUXYw6haJ9JUTRUxqnRkMSbscaytyTbdEctgJnAd9NpxRYOL6hH2g8RIvQwT
+        T8OFZOyH+DfCfpJZe0+9sCHd+BYADZy3SHEjQCNNwofpIpWrReI42wN1175FzJDCVpK0H7vh76i84tAf
+        m6So1cQZH4EFQEO7Z6QgCiqnMBxSZDIKVFOazJ0lk1FCBqOEDEaH1N4BRZ9J+PB3ScUAAAAASUVORK5C
+        YII=
+</value>
   </data>
   <data name="&gt;&gt;toolStripButton6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="fileMenu.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="TaskToolStripMenuItem.Text" xml:space="preserve">
+    <value>Постановка задачи</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 400</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ClassificationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
+  </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 115</value>
+  </data>
+  <data name="CallHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 26</value>
+  </data>
+  <data name="&gt;&gt;astBox.Name" xml:space="preserve">
+    <value>astBox</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="toolStripButton6.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>FilePath</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="toolStripButton4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="editMenu.Text" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN3SURBVFhHxdcP
+        aJR1HMfxZ/1hJy4sbIlh5c5JRCII/kEYttBiK5nObbKbrBbVXP5JIzUVlIkuJcopTpanFrOQmbjKShdr
+        u6VX1sjJLClIA/9stqkRuclugW+/v90Tu+f2u+ePLfrCi7v73ud+v+e5e373uzNcV5h7jEYCdzQRTArR
+        ktREl+gzdamees4IUShSzFf9+0quJ/3OBoJ3NdAjcKlHvSa5kXHmMLdRIXy+erbIAfQJblPE9yVvGkdI
+        Nkd1V77DpA37glOCIdKqxjSHt6+Uz5mQ8ikdgiHWocY2p9HXiEP4762jY0QdOBn5McxojFL3dZl4/WMn
+        fCfkc7rvIK0CJ345o9Dv0HUjqukypH1izdhoG/MRw8xZByr1AFvurwU3Ks8MTP6PrT/pszqptWw2p41W
+        6gekj/qQiMCN+ouDD6D+gj6bQOSB2pglOrqGoMCt7acHH0Blmz6b0D529U8+ah/Dx7xHt8Ctx+Usvm4f
+        mLz5UrSny9roSd0p35hjdxN4ZDd4NW4vPCNXtuLfo884eTjIfCOtmqDg/+Cv5l1jfBUt6VXgxcqv4Jhc
+        iLHWNOmztnZwwnh0O1cEXoQ1q+Ab6emytrbRaTy2lT6BF99qDkD1dFkHvcaEt+gWeBE+D5d7rFRPl3XQ
+        a0zczDmBF83n4PxfVqqnyzroNCZtJDxpE3jRcBZ+/dNK9XRZByeMKRt4e/IG8OLoL3DmmpXq6bK2yqk2
+        pq3nqanrwIvDP8OpK1aqp8vaWk+BkVmOb/pargncqvsRvpftOJbq6bI2uieuYHj/fpCxmvKMN8CtA7Lx
+        HO+wUj1dNqFV5makauYaRs5YwXWBG/tb5UeIrPtYqqfLJtCb8Rp+c/poZS5n8ZPLwY2aH2T/l3UfS/V0
+        Wa1lVJjTxhZJs17ls1lLwcnOZrnofrOqCumzGm2ZJfjMSa2VtYgpTy8CJ7mroKwSXtkWtVDuz3ldn43T
+        nlXGWHO6wZX9Mk9kL4T/RCntz5Y5/Cyf/SLvCIbcS5ycW2Jz5qWl3J3zAktynufvnBKIc1PTcysyp4SK
+        7KU2f83mFfN+bjG9gjiR3OeoyCnkQclslMdX455PSPLdYldeUdxS01VBEeH8IjD9IY9b8hawqbCQh8xI
+        f6l3qSBAVn6ASnFMsu3ihoiIzvwFfCe31XkB5hcXm99wjmUYtwDMbHhOMTWUYAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripButton2.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;PasteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CreateToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton4.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainerLines.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewErrors.Parent" xml:space="preserve">
+    <value>tabPageErrors</value>
+  </data>
+  <data name="&gt;&gt;AnalysisToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchSubstringsToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchSubstringsToolStripMenuItem</value>
+  </data>
+  <data name="CopyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="tabPageResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="&gt;&gt;RepeatToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextSizeComboBox.Items3" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLexemes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;fileMenu.Name" xml:space="preserve">
+    <value>fileMenu</value>
+  </data>
+  <data name="textMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="&gt;&gt;TextSizeMenuItem.Name" xml:space="preserve">
+    <value>TextSizeMenuItem</value>
+  </data>
+  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 152</value>
+  </data>
+  <data name="regexSelector.Items3" xml:space="preserve">
+    <value>граф (snake_case)
+</value>
+  </data>
+  <data name="searchSubstringsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="&gt;&gt;GrammarToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton1.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 500</value>
+  </data>
+  <data name="statusLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="&gt;&gt;lineNumberBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton4.ToolTipText" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="splitContainerLines.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="regexSelector.Items" xml:space="preserve">
+    <value>Закрывающий тег &lt;/p&gt;</value>
+  </data>
+  <data name="ввToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 24</value>
+  </data>
   <data name="tabControlResults.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;localizationMenu.Name" xml:space="preserve">
-    <value>localizationMenu</value>
+  <data name="statusPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
   </data>
-  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
-    <value>richTextBox1</value>
+  <data name="statusSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 500</value>
+  <data name="toolStripButton6.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="runMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabPageErrors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TextSizeComboBox.Items14" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel2.Name" xml:space="preserve">
+    <value>splitContainerLines.Panel2</value>
+  </data>
+  <data name="toolStripButton5.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="astBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;OpenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Текстовый редактор</value>
+  </data>
+  <data name="dataGridViewErrors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 152</value>
+  </data>
+  <data name="localizationMenu.Text" xml:space="preserve">
+    <value>Локализация</value>
+  </data>
+  <data name="lineNumberBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="PasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;textMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLexemes.Parent" xml:space="preserve">
+    <value>tabPageResults</value>
+  </data>
+  <data name="dataGridViewLexemes.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="toolStripButton8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="regexSelector.Items2" xml:space="preserve">
+    <value>DOI</value>
+  </data>
+  <data name="lineNumberBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 191</value>
+  </data>
+  <data name="&gt;&gt;tabsStrip.Name" xml:space="preserve">
+    <value>tabsStrip</value>
+  </data>
+  <data name="&gt;&gt;HighlightAllВсеToolStripMenuItem.Name" xml:space="preserve">
+    <value>HighlightAllВсеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SaveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="statusLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="TextSizeComboBox.Items7" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="toolStripButton3.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 54</value>
+  </data>
+  <data name="regexSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 54</value>
+  </data>
+  <data name="tabsStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 30</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolStripButton7.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="editMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 24</value>
+  </data>
+  <data name="CancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SourceListToolStripMenuItem.Name" xml:space="preserve">
+    <value>SourceListToolStripMenuItem</value>
+  </data>
+  <data name="toolStripButton9.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButton10.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStripButton12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 27</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CloseTabMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 22</value>
+  </data>
+  <data name="dataGridViewErrors.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 191</value>
+  </data>
+  <data name="SaveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Parent" xml:space="preserve">
+    <value>tabPageResults</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerLines</value>
+  </data>
+  <data name="toolStripButton8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFjSURBVFhH7ZY9
+        TgMxEIVdJZyCK+QIJDRwAa5CIiUFDQQkDgD9JgVXyUb8CdHQQHA6tsgBMJ5lkMLsm5DBiAL2SV+38z07
+        lhW7Omp6013XzWeRoLKfP7nudIcnfjilHJRWeeSJtOxdhEZnXJx0RsU8gopU6PuIb2fFkDystGV7VByz
+        qAQVaSzPxU0csdKWOFzu/IPm4AqWSTbid8tzkTkrbRGS0DrzXy6Cylvn/tMcwUpbpCQFVtqCRN+FlbYg
+        EWIrewmbpw+h0b+Ex6LgI0N3cKffEFSGoHIhX59ert8QVIYw7lyi3xBUhgBSG1pQGUIKx7eLcF+8QrKb
+        ReV7rqsGlSGkkEpQOZFd/8ICzGhBZQgprI/AjBZUhpDC+gjMaEFlCCn8U0fgZRmiIrSihV60qFACpRa0
+        0HOaF7Hyl2gOkv6OZ1yXEHrZYPkaTA7ZkhB6Vr0vgp5ZoATyXJavepL90zj3BhUReM6P6/iQAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageErrors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextSizeComboBox.Name" xml:space="preserve">
+    <value>TextSizeComboBox</value>
+  </data>
+  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="toolStripButton2.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 382</value>
+  </data>
+  <data name="TextSizeComboBox.Items" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMain</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="regexSelector.Items1" xml:space="preserve">
+    <value>snake_case идентификатор</value>
+  </data>
+  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="textMenu.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="&gt;&gt;HighlightAllВсеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;regexSelector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GrammarToolStripMenuItem.Name" xml:space="preserve">
+    <value>GrammarToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;CloseTabMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SourceListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
+  </data>
+  <data name="toolStripButton1.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStripButton5.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStripButton10.ToolTipText" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="toolStripButton10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGqSURBVFhH7Zc/
+        T8JQFMXr5ICTBikFE4oufgYdnF3UwS+hDpBAq5uJiYubkZIocUBWw5dwJvCqi39Go4mDKW3iQGK9Fx+J
+        NLcWeFCWnuS38N4950Dy2oc0qNQrJ6Ea7apq2G+AOyKvquFUUhftBW47mBJn77GMYT8ThqNirpy7s9w+
+        WNmSkydMxCjbB9w+WGrJrpEmAmQM55rbBytr2HXKRAj4Utw+WKEVSBRaMUVvrstFtouk880Ufh5KAUVn
+        W0nN/EhqzO2haGwb1yZeAIJXIfDrb3jIBVqn3vCwC9xOuQCre8ORqEBUICoQFZh6AXwj4jpuJk0E6LuQ
+        QBhdQGsVcR025ygTQfa74SgIIwvAO+IO1/FSCgNPHgMR+i+lEOZTACiYO7hnuWwvwrX8BoYtj9kwfOK1
+        PF2x5rvBPUGQfwGdWfKhucG3TkYQ5F/glw5wqRTv1+LHD3N8bHwC86ACQvSOs69g09QL1LxD4wSeJ5s8
+        ihYctxw1OCY6S1pD4VG08P8A3IwfiWFxdHbCY/6XfNSIwy9RxWNHGg3HN/ACT9I9SXJneAQhSfoBHiHs
+        z/2tE6kAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -213,408 +681,229 @@
         AAKAAAACQAAAApAAAAGQAAAByAAAIdL//ok=
 </value>
   </data>
-  <data name="toolStripButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="&gt;&gt;viewMenu.Name" xml:space="preserve">
-    <value>viewMenu</value>
-  </data>
-  <data name="&gt;&gt;statusLines.Name" xml:space="preserve">
-    <value>statusLines</value>
-  </data>
-  <data name="&gt;&gt;statusFile.Name" xml:space="preserve">
-    <value>statusFile</value>
-  </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 115</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;CallHelpToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ExampleToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CopyToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;statusPosition.Name" xml:space="preserve">
+    <value>statusPosition</value>
   </data>
-  <data name="TextSizeComboBox.Items5" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="toolStripButton4.ToolTipText" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="TextSizeComboBox.Items2" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TextSizeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
-  </data>
-  <data name="splitContainerLines.IsSplitterFixed" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="toolStripButton10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="richTextBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
   </data>
-  <data name="toolStripButton6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;regexSelector.Name" xml:space="preserve">
+    <value>regexSelector</value>
   </data>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ввToolStripMenuItem.Name" xml:space="preserve">
-    <value>ввToolStripMenuItem</value>
-  </data>
-  <data name="lineNumberBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 4</value>
-  </data>
-  <data name="&gt;&gt;SaveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="toolStripButton4.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;statusPosition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="viewMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
-  </data>
-  <data name="CallHelpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вызов справки</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 24</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Удалить</value>
-  </data>
-  <data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 26</value>
-  </data>
-  <data name="toolStripButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton8.Name" xml:space="preserve">
-    <value>toolStripButton8</value>
-  </data>
-  <data name="toolStripButton11.ToolTipText" xml:space="preserve">
-    <value>Повторить</value>
-  </data>
-  <data name="statusFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="tableLayoutPanelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 500</value>
-  </data>
-  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 478</value>
-  </data>
-  <data name="tableLayoutPanelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewLexemes.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewErrors.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
   </data>
-  <data name="&gt;&gt;runMenu.Name" xml:space="preserve">
-    <value>runMenu</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
-    <value>tableLayoutPanelMain</value>
-  </data>
-  <data name="&gt;&gt;AnalysisToolStripMenuItem.Name" xml:space="preserve">
-    <value>AnalysisToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;CodeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton9.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="toolStripButton7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="toolStripButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="&gt;&gt;tabPageErrors.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;helpMenu.Name" xml:space="preserve">
-    <value>helpMenu</value>
-  </data>
-  <data name="toolStripButton12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 27</value>
-  </data>
-  <data name="CreateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Создать</value>
-  </data>
-  <data name="AnalysisToolStripMenuItem.Text" xml:space="preserve">
-    <value>Метод анализа</value>
-  </data>
-  <data name="&gt;&gt;tabPageErrors.Parent" xml:space="preserve">
-    <value>tabControlResults</value>
-  </data>
-  <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
-  </data>
-  <data name="statusLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="toolStripButton3.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="tabPageErrors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;OpenToolStripMenuItem.Name" xml:space="preserve">
-    <value>OpenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;tabControlResults.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CodeToolStripMenuItem.Name" xml:space="preserve">
-    <value>CodeToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton3.Name" xml:space="preserve">
-    <value>toolStripButton3</value>
-  </data>
-  <data name="CancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CallHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 26</value>
-  </data>
-  <data name="&gt;&gt;TextSizeMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileMenu.Text" xml:space="preserve">
-    <value>Файл</value>
-  </data>
-  <data name="&gt;&gt;regexSelector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox2.Parent" xml:space="preserve">
-    <value>tabPageResults</value>
-  </data>
-  <data name="lineNumberBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="CutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="&gt;&gt;tabControlResults.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="dataGridViewErrors.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;TextSizeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SourceListToolStripMenuItem.Text" xml:space="preserve">
-    <value>Список литературы</value>
-  </data>
-  <data name="&gt;&gt;DeleteToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ExampleToolStripMenuItem.Name" xml:space="preserve">
-    <value>ExampleToolStripMenuItem</value>
-  </data>
-  <data name="RepeatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="tabsStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 82</value>
-  </data>
-  <data name="CutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вырезать</value>
-  </data>
-  <data name="&gt;&gt;PasteToolStripMenuItem.Name" xml:space="preserve">
-    <value>PasteToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;tabsStrip.Parent" xml:space="preserve">
-    <value>tableLayoutPanelMain</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 400</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lineNumberBox.Name" xml:space="preserve">
-    <value>lineNumberBox</value>
-  </data>
-  <data name="TaskToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton7.Name" xml:space="preserve">
-    <value>toolStripButton7</value>
-  </data>
-  <data name="tabsStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel2.Name" xml:space="preserve">
-    <value>splitContainerLines.Panel2</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton5.Name" xml:space="preserve">
-    <value>toolStripButton5</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton6.Name" xml:space="preserve">
-    <value>toolStripButton6</value>
-  </data>
-  <data name="toolStripButton8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="&gt;&gt;CutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lineNumberBox.Parent" xml:space="preserve">
-    <value>splitContainerLines.Panel1</value>
-  </data>
-  <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="splitContainerLines.SplitterDistance" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="localizationMenu.Text" xml:space="preserve">
-    <value>Локализация</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>tableLayoutPanelMain</value>
-  </data>
-  <data name="richTextBox2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel1.Name" xml:space="preserve">
-    <value>splitContainerLines.Panel1</value>
-  </data>
-  <data name="toolStripButton3.ToolTipText" xml:space="preserve">
-    <value>Открыть</value>
   </data>
   <data name="&gt;&gt;toolStripButton1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AboutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripButton3.Name" xml:space="preserve">
+    <value>toolStripButton3</value>
   </data>
-  <data name="&gt;&gt;tabPageResults.Parent" xml:space="preserve">
-    <value>tabControlResults</value>
+  <data name="&gt;&gt;toolStripButton10.Name" xml:space="preserve">
+    <value>toolStripButton10</value>
   </data>
-  <data name="&gt;&gt;lineNumberBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="viewMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 24</value>
   </data>
-  <data name="&gt;&gt;TextSizeMenuItem.Name" xml:space="preserve">
-    <value>TextSizeMenuItem</value>
+  <data name="tableLayoutPanelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridViewLexemes.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="toolStripButton7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 51</value>
   </data>
-  <data name="&gt;&gt;tabsStrip.Name" xml:space="preserve">
-    <value>tabsStrip</value>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;CreateToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripButton4.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="helpMenu.Text" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 382</value>
-  </data>
-  <data name="&gt;&gt;ExampleToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="runMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 24</value>
-  </data>
-  <data name="&gt;&gt;tabPageResults.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GrammarToolStripMenuItem.Name" xml:space="preserve">
-    <value>GrammarToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanelMain.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CallHelpToolStripMenuItem.Name" xml:space="preserve">
-    <value>CallHelpToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;RepeatToolStripMenuItem.Name" xml:space="preserve">
-    <value>RepeatToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageResults.Text" xml:space="preserve">
-    <value>Результаты</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="richTextBox1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;SaveAsToolStripMenuItem.Name" xml:space="preserve">
+    <value>SaveAsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>AboutToolStripMenuItem</value>
+  </data>
+  <data name="toolStripButton10.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ExampleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Тестовый пример</value>
+  </data>
+  <data name="&gt;&gt;statusPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RepeatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton11.Name" xml:space="preserve">
+    <value>toolStripButton11</value>
+  </data>
+  <data name="richTextBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="toolStripButton11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="TextSizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 26</value>
+  </data>
+  <data name="&gt;&gt;ввToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;AboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton7.Name" xml:space="preserve">
+    <value>toolStripButton7</value>
+  </data>
+  <data name="tabContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="toolStripButton9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;CutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseTabMenuItem.Name" xml:space="preserve">
+    <value>CloseTabMenuItem</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="toolStripButton9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
+        qwAAE6sBnBsJ0QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMiSURBVFhH7VY9
+        axRRFB0/ECsrbcRCizQWmsKPWBgtFaKJYPwF+gtUbFOqCDszG0sxmsrFykqrNLI7H0uIkZVEJCHs6kbE
+        LpAsYd713Ld3lsm+mckmJmiRA5fZPe/cd+77mnnWHv5beA0a8OrUJ3+3DcejPrtKF+Vvb6jU6Z7XUOQ3
+        1JrfoCGhtwzbpyEnUGsIcny6K3Q+ajU6BPPfXIBEaztFiHlLm7fj1xjRfmnORtCg/oT5topIMW8HlkMk
+        2cDan0gpQBfhfadhkWWiGNJ1mK0a5ojiNB0XWT5gNt9l3ikibyYyR96OOZFtDmzCq2zWZZ5bxCbmLTeg
+        KyLtDeU6XYPZapd5p4jkcuRNO6Jlh3RTpFtDL0XsmnmMvCIqDbU++Zkyp/2vzWPkFVFGvJ7dRfMYWyhi
+        581jSBGpp4OLmJxV67tmzuANNzFLrUrdLICD90QvL6ueQET7CgH1OyEN2wENFqs0gunVu33iE8wyikC0
+        Pi7RHc7hXO6D+5JuewNeKqMwWpQ1TQ1ec572pDkXVfqCV25o6BfckG5L9/lwfXqUSGy6gXqPZw1PleB1
+        vJrBlMueKMP8xUybF23NCdUHPJuxHkU8FJt0uB4NQMjJkRPQg+TncxxTagdqJe4MoXd7fDp45Mw/r6qV
+        8WkalDSrVKIDbNzuU0X4fUGaTEDwljuxg6gg1AZwEfFM4JYzKrQ1tUgjPO3cljRPwgkim/PcUJWEMoER
+        /tQij04LZQDtgdb4dFkoiz80zCFqQhkoVOikaJaFMoFGfX1CAUeEMoD2d1oT0A2hLF4K5njNhTLwcooO
+        aw1OklAm0PhVOk/9dPJ6on2JNbZHZ4TmjXuWOUSTNUJvQMGnS6LJvhfYfvSURVjL8tgUHRS6g8QJ+ZY8
+        2/wb3ILOTdnp3BfaKtxuh9FjoU2403QMomUWcgKfijFcUos+ncLGdMDxTla44d6SlA74nEseNJHNOZwr
+        I9fmiOazKh2VlHTgDXYewriI7ojQfl+kBhLHLS23iaLOiTQfeibC6AmS5hH8vf+BUb3h4kSSCT7nrGVD
+        yZ3jad905Hv4N7CsP0vx9umgwc9mAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="TextSizeComboBox.Items4" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ClassificationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RepeatToolStripMenuItem.Text" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="toolStripButton11.ToolTipText" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="lineNumberBox.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
+    <value>richTextBox1</value>
+  </data>
+  <data name="splitContainerLines.SplitterDistance" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLexemes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusFile.Name" xml:space="preserve">
+    <value>statusFile</value>
+  </data>
+  <data name="&gt;&gt;SourceListToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH0SURBVFhHYxgF
+        owAduHT85/fo+V7j3vujA4SNyp5u1yt6cByEU6c8ujpnx9OnxOIlu+4/cuv5Hg01mjjg3vO9Doj/w7B2
+        wZ3/SmmXwbh20d3/z56/wImv33v+f8Hep/8nbn78/+z15/+PX7gFMaf7exPUeMLAvedHD7kOWHno2X/z
+        2kf/DUvv/m9Z+QDhACB2bH27FmoFfkArB1g3vvxv2/x6GtQa3ICWDrBpfnEaag1uMKQdMHvHk/8GQMu1
+        82/+b13xkPoOqFl0B6vFMHzh5tP/dUsfgPG1O8//n7hwk3IHWNS++K+ec+O/WvaN/7F9t/6fuXjr//kr
+        hPGFKzf+z9/5gHIHUAuPOoBsBzRv/Pb/+M2vWPExIN598fP/nRcw8ckb7/+vP/aKcgdcefjt/4+fP/9/
+        +/YNA38F4k+fP///+OkTBn799u3/qzfvUMEBj4AWff2K1RJ8eNQBw8cBlx58/f9lIB1w7Ab2VE4IU+QA
+        UPkPqnzMqp5T7ACQGSCzDMseEO8Ap/bP/63qX/93av9EsQNAZoDMMq95QpwD7NveLrNtAjafoPjqvdf/
+        n798RToGVs9Xb9wBm2FVD2moANl7odbgBnYtb2WBCvfYNL86DsIHzz/+dO7a/Z/kYJBemDlAM3c79b2R
+        hlozCkYBFDAwAACTwwYPdAeCnwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="OpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="TextSizeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="&gt;&gt;statusLang.Name" xml:space="preserve">
+    <value>statusLang</value>
+  </data>
+  <data name="&gt;&gt;PasteToolStripMenuItem.Name" xml:space="preserve">
+    <value>PasteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;astBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolStripButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -647,200 +936,392 @@
         nUQlI3H4RF9/f3tVFaJ/AT1Siit3mh7kAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;dataGridViewLexemes.Name" xml:space="preserve">
-    <value>dataGridViewLexemes</value>
+  <data name="&gt;&gt;tabContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="toolStripButton4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="SaveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+  <data name="tabPageResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 152</value>
+  </data>
+  <data name="localizationMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 24</value>
+  </data>
+  <data name="&gt;&gt;TextSizeMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolStripButton11.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="dataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;toolStripButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripButton5.Name" xml:space="preserve">
+    <value>toolStripButton5</value>
   </data>
-  <data name="toolStripButton4.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;ExampleToolStripMenuItem.Name" xml:space="preserve">
+    <value>ExampleToolStripMenuItem</value>
   </data>
-  <data name="statusSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
+  <data name="&gt;&gt;splitContainerLines.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;statusSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControlResults.Name" xml:space="preserve">
-    <value>tabControlResults</value>
-  </data>
-  <data name="&gt;&gt;HighlightAllВсеToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn1.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="HighlightAllВсеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Выделить все</value>
-  </data>
-  <data name="tabPageErrors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>786, 152</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
-    <value>toolStripButton1</value>
-  </data>
-  <data name="dataGridViewErrors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="toolStripButton7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
-    <value>richTextBox2</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>FilePath</value>
-  </data>
-  <data name="regexSelector.Items1" xml:space="preserve">
-    <value>snake_case идентификатор</value>
-  </data>
-  <data name="&gt;&gt;CancelToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGqSURBVFhH7Zc/
-        T8JQFMXr5ICTBikFE4oufgYdnF3UwS+hDpBAq5uJiYubkZIocUBWw5dwJvCqi39Go4mDKW3iQGK9Fx+J
-        NLcWeFCWnuS38N4950Dy2oc0qNQrJ6Ea7apq2G+AOyKvquFUUhftBW47mBJn77GMYT8ThqNirpy7s9w+
-        WNmSkydMxCjbB9w+WGrJrpEmAmQM55rbBytr2HXKRAj4Utw+WKEVSBRaMUVvrstFtouk880Ufh5KAUVn
-        W0nN/EhqzO2haGwb1yZeAIJXIfDrb3jIBVqn3vCwC9xOuQCre8ORqEBUICoQFZh6AXwj4jpuJk0E6LuQ
-        QBhdQGsVcR025ygTQfa74SgIIwvAO+IO1/FSCgNPHgMR+i+lEOZTACiYO7hnuWwvwrX8BoYtj9kwfOK1
-        PF2x5rvBPUGQfwGdWfKhucG3TkYQ5F/glw5wqRTv1+LHD3N8bHwC86ACQvSOs69g09QL1LxD4wSeJ5s8
-        ihYctxw1OCY6S1pD4VG08P8A3IwfiWFxdHbCY/6XfNSIwy9RxWNHGg3HN/ACT9I9SXJneAQhSfoBHiHs
-        z/2tE6kAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripButton6.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;AboutToolStripMenuItem.Name" xml:space="preserve">
-    <value>AboutToolStripMenuItem</value>
-  </data>
-  <data name="AboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>О программе</value>
-  </data>
-  <data name="&gt;&gt;tabControlResults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton9.Name" xml:space="preserve">
-    <value>toolStripButton9</value>
-  </data>
-  <data name="toolStripButton5.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;OpenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFjSURBVFhH7ZY9
-        TgMxEIVdJZyCK+QIJDRwAa5CIiUFDQQkDgD9JgVXyUb8CdHQQHA6tsgBMJ5lkMLsm5DBiAL2SV+38z07
-        lhW7Omp6013XzWeRoLKfP7nudIcnfjilHJRWeeSJtOxdhEZnXJx0RsU8gopU6PuIb2fFkDystGV7VByz
-        qAQVaSzPxU0csdKWOFzu/IPm4AqWSTbid8tzkTkrbRGS0DrzXy6Cylvn/tMcwUpbpCQFVtqCRN+FlbYg
-        EWIrewmbpw+h0b+Ex6LgI0N3cKffEFSGoHIhX59ert8QVIYw7lyi3xBUhgBSG1pQGUIKx7eLcF+8QrKb
-        ReV7rqsGlSGkkEpQOZFd/8ICzGhBZQgprI/AjBZUhpDC+gjMaEFlCCn8U0fgZRmiIrSihV60qFACpRa0
-        0HOaF7Hyl2gOkv6OZ1yXEHrZYPkaTA7ZkhB6Vr0vgp5ZoATyXJavepL90zj3BhUReM6P6/iQAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="editMenu.Text" xml:space="preserve">
-    <value>Правка</value>
-  </data>
-  <data name="CancelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Отменить</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Name" xml:space="preserve">
-    <value>splitContainerLines</value>
-  </data>
-  <data name="&gt;&gt;richTextBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="toolStripButton5.ToolTipText" xml:space="preserve">
-    <value>Отменить</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextSizeComboBox.Items11" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="ввToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 24</value>
-  </data>
-  <data name="dataGridViewErrors.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="toolStripButton7.ToolTipText" xml:space="preserve">
+    <value>Пуск</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 28</value>
   </data>
+  <data name="&gt;&gt;viewMenu.Name" xml:space="preserve">
+    <value>viewMenu</value>
+  </data>
+  <data name="toolStrip1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tableLayoutPanelMain.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="menuStrip1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="toolStrip1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tabsStrip" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer1" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="dataGridViewErrors.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMain.Name" xml:space="preserve">
+    <value>tableLayoutPanelMain</value>
+  </data>
+  <data name="toolStripButton2.ToolTipText" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;CreateToolStripMenuItem.Name" xml:space="preserve">
+    <value>CreateToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;localizationMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlResults.Name" xml:space="preserve">
+    <value>tabControlResults</value>
+  </data>
+  <data name="dataGridViewErrors.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="CallHelpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вызов справки</value>
+  </data>
+  <data name="&gt;&gt;CancelToolStripMenuItem.Name" xml:space="preserve">
+    <value>CancelToolStripMenuItem</value>
+  </data>
+  <data name="tabPageErrors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 152</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLexemes.Name" xml:space="preserve">
+    <value>dataGridViewLexemes</value>
+  </data>
+  <data name="&gt;&gt;astBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextSizeComboBox.Items9" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;tabPageErrors.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="statusFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="&gt;&gt;CutToolStripMenuItem.Name" xml:space="preserve">
+    <value>CutToolStripMenuItem</value>
+  </data>
+  <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 24</value>
+  </data>
+  <data name="&gt;&gt;ClassificationToolStripMenuItem.Name" xml:space="preserve">
+    <value>ClassificationToolStripMenuItem</value>
+  </data>
+  <data name="toolStripButton10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripButton6.ToolTipText" xml:space="preserve">
+    <value>Вызов справки</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewLexemes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 500</value>
+  </data>
+  <data name="AnalysisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
+  </data>
+  <data name="TextSizeComboBox.Items2" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="splitContainerLines.SplitterWidth" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dataGridViewErrors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;tabsStrip.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMain</value>
+  </data>
+  <data name="toolStripButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="&gt;&gt;DeleteToolStripMenuItem.Name" xml:space="preserve">
+    <value>DeleteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
+    <value>richTextBox2</value>
+  </data>
+  <data name="&gt;&gt;tabPageResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabsStrip.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;ввToolStripMenuItem.Name" xml:space="preserve">
+    <value>ввToolStripMenuItem</value>
+  </data>
+  <data name="SaveAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton12.Name" xml:space="preserve">
+    <value>toolStripButton12</value>
+  </data>
+  <data name="tabControlResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 185</value>
+  </data>
+  <data name="splitContainerLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 191</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CodeToolStripMenuItem.Name" xml:space="preserve">
+    <value>CodeToolStripMenuItem</value>
+  </data>
+  <data name="toolStripButton3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="viewMenu.Text" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CallHelpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerLines</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="&gt;&gt;TaskToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;astBox.Parent" xml:space="preserve">
+    <value>tabPageResults</value>
+  </data>
+  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="PasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="lineNumberBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;textMenu.Name" xml:space="preserve">
+    <value>textMenu</value>
+  </data>
+  <data name="toolStripButton5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;CancelToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton1.ToolTipText" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Name" xml:space="preserve">
+    <value>splitContainerLines</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewErrors.Name" xml:space="preserve">
+    <value>dataGridViewErrors</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton9.Name" xml:space="preserve">
+    <value>toolStripButton9</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tabPageErrors.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CreateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="&gt;&gt;statusLines.Name" xml:space="preserve">
+    <value>statusLines</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AnalysisToolStripMenuItem.Text" xml:space="preserve">
+    <value>Метод анализа</value>
+  </data>
+  <data name="lineNumberBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextSizeComboBox.Items5" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="toolStripButton8.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ExitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TaskToolStripMenuItem.Name" xml:space="preserve">
+    <value>TaskToolStripMenuItem</value>
+  </data>
+  <data name="toolStripButton10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="&gt;&gt;tabControlResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вырезать</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 478</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextSizeComboBox.Items11" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SaveAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextSizeComboBox.Items8" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;tabPageErrors.Parent" xml:space="preserve">
+    <value>tabControlResults</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabControlResults.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TextSizeComboBox.Items15" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;editMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tableLayoutPanelMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="toolStripButton2.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="&gt;&gt;fileMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton8.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;splitContainerLines.Panel1.ZOrder" xml:space="preserve">
+  <data name="astBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="TextSizeComboBox.Items1" xml:space="preserve">
-    <value>9</value>
+  <data name="tableLayoutPanelMain.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN3SURBVFhHxdcP
-        aJR1HMfxZ/1hJy4sbIlh5c5JRCII/kEYttBiK5nObbKbrBbVXP5JIzUVlIkuJcopTpanFrOQmbjKShdr
-        u6VX1sjJLClIA/9stqkRuclugW+/v90Tu+f2u+ePLfrCi7v73ud+v+e5e373uzNcV5h7jEYCdzQRTArR
-        ktREl+gzdamees4IUShSzFf9+0quJ/3OBoJ3NdAjcKlHvSa5kXHmMLdRIXy+erbIAfQJblPE9yVvGkdI
-        Nkd1V77DpA37glOCIdKqxjSHt6+Uz5mQ8ikdgiHWocY2p9HXiEP4762jY0QdOBn5McxojFL3dZl4/WMn
-        fCfkc7rvIK0CJ345o9Dv0HUjqukypH1izdhoG/MRw8xZByr1AFvurwU3Ks8MTP6PrT/pszqptWw2p41W
-        6gekj/qQiMCN+ouDD6D+gj6bQOSB2pglOrqGoMCt7acHH0Blmz6b0D529U8+ah/Dx7xHt8Ctx+Usvm4f
-        mLz5UrSny9roSd0p35hjdxN4ZDd4NW4vPCNXtuLfo884eTjIfCOtmqDg/+Cv5l1jfBUt6VXgxcqv4Jhc
-        iLHWNOmztnZwwnh0O1cEXoQ1q+Ab6emytrbRaTy2lT6BF99qDkD1dFkHvcaEt+gWeBE+D5d7rFRPl3XQ
-        a0zczDmBF83n4PxfVqqnyzroNCZtJDxpE3jRcBZ+/dNK9XRZByeMKRt4e/IG8OLoL3DmmpXq6bK2yqk2
-        pq3nqanrwIvDP8OpK1aqp8vaWk+BkVmOb/pargncqvsRvpftOJbq6bI2uieuYHj/fpCxmvKMN8CtA7Lx
-        HO+wUj1dNqFV5makauYaRs5YwXWBG/tb5UeIrPtYqqfLJtCb8Rp+c/poZS5n8ZPLwY2aH2T/l3UfS/V0
-        Wa1lVJjTxhZJs17ls1lLwcnOZrnofrOqCumzGm2ZJfjMSa2VtYgpTy8CJ7mroKwSXtkWtVDuz3ldn43T
-        nlXGWHO6wZX9Mk9kL4T/RCntz5Y5/Cyf/SLvCIbcS5ycW2Jz5qWl3J3zAktynufvnBKIc1PTcysyp4SK
-        7KU2f83mFfN+bjG9gjiR3OeoyCnkQclslMdX455PSPLdYldeUdxS01VBEeH8IjD9IY9b8hawqbCQh8xI
-        f6l3qSBAVn6ASnFMsu3ihoiIzvwFfCe31XkB5hcXm99wjmUYtwDMbHhOMTWUYAAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;statusSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="tabsStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 82</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;editMenu.Name" xml:space="preserve">
+    <value>editMenu</value>
+  </data>
+  <data name="&gt;&gt;lineNumberBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;localizationMenu.Name" xml:space="preserve">
+    <value>localizationMenu</value>
+  </data>
+  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="toolStripButton11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -857,190 +1338,149 @@
         UcBfY5WbDjUFNJgHlsuCMZNFlzVQzBMo5gkU80Nan8VoSfTSRUpiAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lineNumberBox.Parent" xml:space="preserve">
+    <value>splitContainerLines.Panel1</value>
   </data>
-  <data name="&gt;&gt;regexSelector.Name" xml:space="preserve">
-    <value>regexSelector</value>
+  <data name="splitContainerLines.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="splitContainerLines.SplitterWidth" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;tabsStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="toolStripButton5.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
+  <data name="dataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;splitContainerLines.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lineNumberBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;statusFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CallHelpToolStripMenuItem.Name" xml:space="preserve">
+    <value>CallHelpToolStripMenuItem</value>
   </data>
-  <data name="toolStripButton2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="toolStripButton9.ToolTipText" xml:space="preserve">
+    <value>Вырезать</value>
   </data>
-  <data name="CloseTabMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 22</value>
-  </data>
-  <data name="&gt;&gt;statusLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextSizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 26</value>
-  </data>
-  <data name="TextSizeComboBox.Items" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;CopyToolStripMenuItem.Name" xml:space="preserve">
-    <value>CopyToolStripMenuItem</value>
-  </data>
-  <data name="tabPageResults.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="dataGridViewErrors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>786, 152</value>
-  </data>
-  <data name="TextSizeComboBox.Items7" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="tableLayoutPanelMain.TabIndex" type="System.Int32, mscorlib">
+  <data name="tableLayoutPanelMain.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="editMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 24</value>
   </data>
   <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RepeatToolStripMenuItem.Text" xml:space="preserve">
-    <value>Повторить</value>
+  <data name="tableLayoutPanelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="toolStripButton10.AccessibleDescription" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;richTextBox1.Parent" xml:space="preserve">
+    <value>splitContainerLines.Panel2</value>
   </data>
-  <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="CodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
   </data>
-  <data name="TextSizeComboBox.Items15" xml:space="preserve">
-    <value>72</value>
+  <data name="helpMenu.Text" xml:space="preserve">
+    <value>Справка</value>
   </data>
-  <data name="TextSizeComboBox.Items12" xml:space="preserve">
-    <value>28</value>
+  <data name="toolStripButton11.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lineNumberBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageErrors.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lineNumberBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGridViewErrors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerLines.Panel1MinSize" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton4.Name" xml:space="preserve">
+    <value>toolStripButton4</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
   </data>
-  <data name="toolStripButton7.ToolTipText" xml:space="preserve">
+  <data name="TextSizeComboBox.Items12" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 26</value>
+  </data>
+  <data name="toolStripButton5.ToolTipText" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="&gt;&gt;tabPageResults.Name" xml:space="preserve">
+    <value>tabPageResults</value>
+  </data>
+  <data name="&gt;&gt;tabPageResults.Parent" xml:space="preserve">
+    <value>tabControlResults</value>
+  </data>
+  <data name="CancelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="runMenu.Text" xml:space="preserve">
     <value>Пуск</value>
-  </data>
-  <data name="TextSizeComboBox.Items4" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="toolStripButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH0SURBVFhHYxgF
-        owAduHT85/fo+V7j3vujA4SNyp5u1yt6cByEU6c8ujpnx9OnxOIlu+4/cuv5Hg01mjjg3vO9Doj/w7B2
-        wZ3/SmmXwbh20d3/z56/wImv33v+f8Hep/8nbn78/+z15/+PX7gFMaf7exPUeMLAvedHD7kOWHno2X/z
-        2kf/DUvv/m9Z+QDhACB2bH27FmoFfkArB1g3vvxv2/x6GtQa3ICWDrBpfnEaag1uMKQdMHvHk/8GQMu1
-        82/+b13xkPoOqFl0B6vFMHzh5tP/dUsfgPG1O8//n7hwk3IHWNS++K+ec+O/WvaN/7F9t/6fuXjr//kr
-        hPGFKzf+z9/5gHIHUAuPOoBsBzRv/Pb/+M2vWPExIN598fP/nRcw8ckb7/+vP/aKcgdcefjt/4+fP/9/
-        +/YNA38F4k+fP///+OkTBn799u3/qzfvUMEBj4AWff2K1RJ8eNQBw8cBlx58/f9lIB1w7Ab2VE4IU+QA
-        UPkPqnzMqp5T7ACQGSCzDMseEO8Ap/bP/63qX/93av9EsQNAZoDMMq95QpwD7NveLrNtAjafoPjqvdf/
-        n798RToGVs9Xb9wBm2FVD2moANl7odbgBnYtb2WBCvfYNL86DsIHzz/+dO7a/Z/kYJBemDlAM3c79b2R
-        hlozCkYBFDAwAACTwwYPdAeCnwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="tabPageResults.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="toolStripButton2.ToolTipText" xml:space="preserve">
-    <value>Создать</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="regexSelector.Items" xml:space="preserve">
-    <value>Закрывающий тег &lt;/p&gt;</value>
-  </data>
-  <data name="toolStripButton8.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ClassificationToolStripMenuItem.Name" xml:space="preserve">
-    <value>ClassificationToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;CancelToolStripMenuItem.Name" xml:space="preserve">
-    <value>CancelToolStripMenuItem</value>
-  </data>
-  <data name="toolStripButton3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="AnalysisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="&gt;&gt;editMenu.Name" xml:space="preserve">
-    <value>editMenu</value>
-  </data>
-  <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAG4SURBVFhH7Zdd
-        UsIwEMdzAfEIKl/lMOqZRH3xSaHoCDrjm15FQMcZQT0CIPqoL4jr/iEwtt22EVLhgZ35MWl2k13SbJpV
-        kuRdKmTKdJAtU5PpMt8M/RGM6ebK1MiUaN85IUdPHy7pKq1nS3TJA79+TWQLzHnBpLQ7rxSOaZOVT9o4
-        SdpbFdrQbsfiHNEaK1o+wyR5wWpr90rpZZcMEyPnUnXkHBuOO5J453EM0hXKK47kUFAa4bhE/AdEnSFF
-        xT9INUkZye4N0fvnmB1uSzYG1BFA39dpRO2epoK2ZGNADwEMfZ1GXD1o7yxoSzYGDBGApIjFUgC0CmC5
-        A0CqnTWJqndBHnvaOwvakg3GxqVoaAA4ZJDj88obzxF1WIUGgEE2Auh/zBgAwPLN8wpOG0Tb1/LcE5Z7
-        E0axCsBmAAv/GL36Oo2w9DnuKNzbBUUsSFEcMsjzuFQLxaVbhaJBVBqAA2auK1mJ9hQqFn5Y3KUUwg+o
-        WCSjxODS73zkHPLvhYlLz57CBIJyiZXtgLF9WoHSbCKsTDE1ZqCNbTLAsmO1tbtwwebgAUWmznSYWcvz
-        DlINu3264Tyi1A+7IK/164JV1wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextSizeComboBox.Items3" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;SourceListToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CodeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Исходный код программы</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="toolStripButton8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="HighlightAllВсеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="&gt;&gt;tabsStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabControlResults.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusLines.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tableLayoutPanelMain.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="menuStrip1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="toolStrip1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tabsStrip" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer1" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="&gt;&gt;SaveToolStripMenuItem.Name" xml:space="preserve">
+    <value>SaveToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>tableLayoutPanelMain</value>
-  </data>
-  <data name="&gt;&gt;editMenu.Type" xml:space="preserve">
+  <data name="&gt;&gt;searchSubstringsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="richTextBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AnalysisToolStripMenuItem.Name" xml:space="preserve">
+    <value>AnalysisToolStripMenuItem</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>191</value>
+  </data>
+  <data name="OpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="TextSizeMenuItem.Text" xml:space="preserve">
+    <value>Размер текста</value>
+  </data>
+  <data name="&gt;&gt;splitContainerLines.Panel1.Name" xml:space="preserve">
+    <value>splitContainerLines.Panel1</value>
+  </data>
+  <data name="toolStripButton9.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMain</value>
+  </data>
+  <data name="TextSizeComboBox.Items1" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="toolStripButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="toolStripButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="CopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Name" xml:space="preserve">
+    <value>helpMenu</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton8.Name" xml:space="preserve">
+    <value>toolStripButton8</value>
   </data>
   <data name="toolStripButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1056,321 +1496,136 @@
         YII=
 </value>
   </data>
-  <data name="&gt;&gt;tabPageResults.Name" xml:space="preserve">
-    <value>tabPageResults</value>
+  <data name="CutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
   </data>
-  <data name="&gt;&gt;CutToolStripMenuItem.Name" xml:space="preserve">
-    <value>CutToolStripMenuItem</value>
-  </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 54</value>
-  </data>
-  <data name="&gt;&gt;TaskToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RepeatToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tableLayoutPanelMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;CloseTabMenuItem.Name" xml:space="preserve">
-    <value>CloseTabMenuItem</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Message</value>
-  </data>
-  <data name="&gt;&gt;TextSizeComboBox.Name" xml:space="preserve">
-    <value>TextSizeComboBox</value>
-  </data>
-  <data name="toolStripButton9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="toolStripButton6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;viewMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TextSizeComboBox.Items6" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="runMenu.Text" xml:space="preserve">
-    <value>Пуск</value>
+  <data name="HighlightAllВсеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
   </data>
-  <data name="searchSubstringsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 24</value>
+  <data name="&gt;&gt;toolStripButton6.Name" xml:space="preserve">
+    <value>toolStripButton6</value>
   </data>
-  <data name="lineNumberBox.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="tabControlResults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 185</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton11.AccessibleDescription" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;dataGridViewErrors.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="toolStripButton8.ToolTipText" xml:space="preserve">
     <value>Вставить</value>
   </data>
-  <data name="&gt;&gt;SaveAsToolStripMenuItem.Name" xml:space="preserve">
-    <value>SaveAsToolStripMenuItem</value>
+  <data name="TaskToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
   </data>
-  <data name="&gt;&gt;ClassificationToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripButton2.Name" xml:space="preserve">
+    <value>toolStripButton2</value>
+  </data>
+  <data name="&gt;&gt;statusFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="astBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainerLines.IsSplitterFixed" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tabPageErrors.Name" xml:space="preserve">
+    <value>tabPageErrors</value>
+  </data>
+  <data name="&gt;&gt;CodeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TaskToolStripMenuItem.Text" xml:space="preserve">
-    <value>Постановка задачи</value>
+  <data name="&gt;&gt;statusLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GrammarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabContextMenu.Name" xml:space="preserve">
+    <value>tabContextMenu</value>
   </data>
-  <data name="TextSizeComboBox.Items13" xml:space="preserve">
-    <value>36</value>
+  <data name="&gt;&gt;ExitToolStripMenuItem.Name" xml:space="preserve">
+    <value>ExitToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanelMain.Name" xml:space="preserve">
-    <value>tableLayoutPanelMain</value>
-  </data>
-  <data name="toolStripButton5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TextSizeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CreateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="PasteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставить</value>
-  </data>
-  <data name="statusLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="viewMenu.Text" xml:space="preserve">
-    <value>Вид</value>
-  </data>
-  <data name="TextSizeComboBox.Items9" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton6.ToolTipText" xml:space="preserve">
-    <value>Вызов справки</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SourceListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="&gt;&gt;tabsStrip.ZOrder" xml:space="preserve">
+  <data name="tabsStrip.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+  <data name="toolStripButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="dataGridViewLexemes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tabPageErrors.Text" xml:space="preserve">
-    <value>Ошибки</value>
+  <data name="&gt;&gt;runMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textMenu.Name" xml:space="preserve">
-    <value>textMenu</value>
+  <data name="&gt;&gt;viewMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;tabControlResults.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
   </data>
-  <data name="toolStripButton3.AccessibleDescription" xml:space="preserve">
-    <value />
+  <data name="CodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Исходный код программы</value>
   </data>
-  <data name="toolStrip1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="toolStripButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
   </data>
-  <data name="&gt;&gt;toolStripButton10.Name" xml:space="preserve">
-    <value>toolStripButton10</value>
+  <data name="GrammarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Грамматика</value>
   </data>
-  <data name="tabPageErrors.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewLexemes.Parent" xml:space="preserve">
-    <value>tabPageResults</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
-    <value>statusStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;tabContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewErrors.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lineNumberBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lineNumberBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ExampleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainerLines.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="toolStripButton3.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="TextSizeComboBox.Items10" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="regexSelector.Items2" xml:space="preserve">
-    <value>DOI</value>
-  </data>
-  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 191</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;searchSubstringsToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchSubstringsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewLexemes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel2.Parent" xml:space="preserve">
-    <value>splitContainerLines</value>
-  </data>
-  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="toolStripButton6.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Parent" xml:space="preserve">
-    <value>splitContainerLines.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewErrors.Name" xml:space="preserve">
-    <value>dataGridViewErrors</value>
-  </data>
-  <data name="&gt;&gt;statusSize.Name" xml:space="preserve">
-    <value>statusSize</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Line</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="toolStripButton9.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="SaveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сохранить как</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageResults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HighlightAllВсеToolStripMenuItem.Name" xml:space="preserve">
-    <value>HighlightAllВсеToolStripMenuItem</value>
-  </data>
-  <data name="splitContainerLines.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton4.Name" xml:space="preserve">
-    <value>toolStripButton4</value>
-  </data>
-  <data name="toolStripButton11.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="tabPageResults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>786, 152</value>
-  </data>
-  <data name="GrammarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;SaveToolStripMenuItem.Name" xml:space="preserve">
-    <value>SaveToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="&gt;&gt;ввToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="toolStripButton1.ToolTipText" xml:space="preserve">
-    <value>О программе</value>
-  </data>
-  <data name="&gt;&gt;statusPosition.Name" xml:space="preserve">
-    <value>statusPosition</value>
-  </data>
-  <data name="tabsStrip.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dataGridViewLexemes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="toolStripButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAITSURBVFhHxZa/
-        S8NAFMdTRUFQwVX8kaSBDhUdHBx18y/wHxAHF3+Am5MgioOIaJNTwcnNf8BJREGxW0cnZ7GIbe5asUjP
-        d63R+HytTWzj8Am9977vvpf05S6alPJfIYNRQgajhAw2gs74lOHwBSoXBDJYj4Ed2WUyvgvmZQBCtK5R
-        yGAt9FR+AkzvlLEH1gSFDGKSp7ITzDaAN7+5AmuDQgb9GI4YBaMMNvbA+qCQQYV2KtsNx10Fk1ds6gfX
-        BYUMgnEC7vyWMsTg2qDgQUy3xRJMXMRGdcgajF+aDme6w+eHnFyff87f+Pyhs2cdJrtAk4ehYNr8wErx
-        pN+oFpULPPI5KHTRRH+lbDpia/xQdmBTPxo8viOiuImItHWYi1PmCnX3J3RhE7H5Q9zOW+QC1KVFfwFC
-        3A/uF/rJBSia2IT1yKhdlVzAxyDMaxiUdeT5NfAIshHF7eKgzsS0wcQKjK9wnqBkHIgxz+uHuUfYrVh1
-        vGG725ArYa0HbFjnnv5bMUXYw6haJ9JUTRUxqnRkMSbscaytyTbdEctgJnAd9NpxRYOL6hH2g8RIvQwT
-        T8OFZOyH+DfCfpJZe0+9sCHd+BYADZy3SHEjQCNNwofpIpWrReI42wN1175FzJDCVpK0H7vh76i84tAf
-        m6So1cQZH4EFQEO7Z6QgCiqnMBxSZDIKVFOazJ0lk1FCBqOEDEaH1N4BRZ9J+PB3ScUAAAAASUVORK5C
-        YII=
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAG4SURBVFhH7Zdd
+        UsIwEMdzAfEIKl/lMOqZRH3xSaHoCDrjm15FQMcZQT0CIPqoL4jr/iEwtt22EVLhgZ35MWl2k13SbJpV
+        kuRdKmTKdJAtU5PpMt8M/RGM6ebK1MiUaN85IUdPHy7pKq1nS3TJA79+TWQLzHnBpLQ7rxSOaZOVT9o4
+        SdpbFdrQbsfiHNEaK1o+wyR5wWpr90rpZZcMEyPnUnXkHBuOO5J453EM0hXKK47kUFAa4bhE/AdEnSFF
+        xT9INUkZye4N0fvnmB1uSzYG1BFA39dpRO2epoK2ZGNADwEMfZ1GXD1o7yxoSzYGDBGApIjFUgC0CmC5
+        A0CqnTWJqndBHnvaOwvakg3GxqVoaAA4ZJDj88obzxF1WIUGgEE2Auh/zBgAwPLN8wpOG0Tb1/LcE5Z7
+        E0axCsBmAAv/GL36Oo2w9DnuKNzbBUUsSFEcMsjzuFQLxaVbhaJBVBqAA2auK1mJ9hQqFn5Y3KUUwg+o
+        WCSjxODS73zkHPLvhYlLz57CBIJyiZXtgLF9WoHSbCKsTDE1ZqCNbTLAsmO1tbtwwebgAUWmznSYWcvz
+        DlINu3264Tyi1A+7IK/164JV1wAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 51</value>
+  </data>
+  <data name="ClassificationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Классификация грамматики</value>
   </data>
   <data name="&gt;&gt;richTextBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPageResults.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageResults.Text" xml:space="preserve">
+    <value>Результаты</value>
+  </data>
+  <data name="&gt;&gt;lineNumberBox.Name" xml:space="preserve">
+    <value>lineNumberBox</value>
+  </data>
+  <data name="ExampleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 26</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="toolStripButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1390,300 +1645,70 @@
         oYMnITiboF8DXwALEtkaIsvwGC/AfGmyT/hEOr+PL/ORomwBM5pxS/eq5LQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;toolStripButton12.Name" xml:space="preserve">
-    <value>toolStripButton12</value>
+  <data name="HighlightAllВсеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Выделить все</value>
   </data>
-  <data name="textMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 24</value>
-  </data>
-  <data name="toolStripButton10.ToolTipText" xml:space="preserve">
-    <value>Копировать</value>
-  </data>
-  <data name="splitContainerLines.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;ExitToolStripMenuItem.Name" xml:space="preserve">
-    <value>ExitToolStripMenuItem</value>
-  </data>
-  <data name="toolStripButton2.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ExitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainerLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 191</value>
-  </data>
-  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="richTextBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButton11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripButton3.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 51</value>
   </data>
-  <data name="toolStripButton10.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="dataGridViewErrors.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="toolStripButton1.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;runMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripButton9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
-        qwAAE6sBnBsJ0QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMiSURBVFhH7VY9
-        axRRFB0/ECsrbcRCizQWmsKPWBgtFaKJYPwF+gtUbFOqCDszG0sxmsrFykqrNLI7H0uIkZVEJCHs6kbE
-        LpAsYd713Ld3lsm+mckmJmiRA5fZPe/cd+77mnnWHv5beA0a8OrUJ3+3DcejPrtKF+Vvb6jU6Z7XUOQ3
-        1JrfoCGhtwzbpyEnUGsIcny6K3Q+ajU6BPPfXIBEaztFiHlLm7fj1xjRfmnORtCg/oT5topIMW8HlkMk
-        2cDan0gpQBfhfadhkWWiGNJ1mK0a5ojiNB0XWT5gNt9l3ikibyYyR96OOZFtDmzCq2zWZZ5bxCbmLTeg
-        KyLtDeU6XYPZapd5p4jkcuRNO6Jlh3RTpFtDL0XsmnmMvCIqDbU++Zkyp/2vzWPkFVFGvJ7dRfMYWyhi
-        581jSBGpp4OLmJxV67tmzuANNzFLrUrdLICD90QvL6ueQET7CgH1OyEN2wENFqs0gunVu33iE8wyikC0
-        Pi7RHc7hXO6D+5JuewNeKqMwWpQ1TQ1ec572pDkXVfqCV25o6BfckG5L9/lwfXqUSGy6gXqPZw1PleB1
-        vJrBlMueKMP8xUybF23NCdUHPJuxHkU8FJt0uB4NQMjJkRPQg+TncxxTagdqJe4MoXd7fDp45Mw/r6qV
-        8WkalDSrVKIDbNzuU0X4fUGaTEDwljuxg6gg1AZwEfFM4JYzKrQ1tUgjPO3cljRPwgkim/PcUJWEMoER
-        /tQij04LZQDtgdb4dFkoiz80zCFqQhkoVOikaJaFMoFGfX1CAUeEMoD2d1oT0A2hLF4K5njNhTLwcooO
-        aw1OklAm0PhVOk/9dPJ6on2JNbZHZ4TmjXuWOUSTNUJvQMGnS6LJvhfYfvSURVjL8tgUHRS6g8QJ+ZY8
-        2/wb3ILOTdnp3BfaKtxuh9FjoU2403QMomUWcgKfijFcUos+ncLGdMDxTla44d6SlA74nEseNJHNOZwr
-        I9fmiOazKh2VlHTgDXYewriI7ojQfl+kBhLHLS23iaLOiTQfeibC6AmS5hH8vf+BUb3h4kSSCT7nrGVD
-        yZ3jad905Hv4N7CsP0vx9umgwc9mAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="&gt;&gt;searchSubstringsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ExampleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Тестовый пример</value>
-  </data>
-  <data name="&gt;&gt;fileMenu.Name" xml:space="preserve">
-    <value>fileMenu</value>
-  </data>
-  <data name="dataGridViewLexemes.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="GrammarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Грамматика</value>
-  </data>
-  <data name="tableLayoutPanelMain.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="toolStripButton1.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;DeleteToolStripMenuItem.Name" xml:space="preserve">
-    <value>DeleteToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lineNumberBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;SourceListToolStripMenuItem.Name" xml:space="preserve">
-    <value>SourceListToolStripMenuItem</value>
-  </data>
-  <data name="toolStripButton8.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lineNumberBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;statusLang.Name" xml:space="preserve">
-    <value>statusLang</value>
-  </data>
-  <data name="toolStripButton10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="TextSizeComboBox.Items8" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;tabPageErrors.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;OpenToolStripMenuItem.Name" xml:space="preserve">
+    <value>OpenToolStripMenuItem</value>
   </data>
   <data name="toolStripButton7.AccessibleDescription" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;tabContextMenu.Name" xml:space="preserve">
-    <value>tabContextMenu</value>
+  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="toolStripButton4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="toolStripButton9.ToolTipText" xml:space="preserve">
-    <value>Вырезать</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Текстовый редактор</value>
-  </data>
-  <data name="dataGridViewErrors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="toolStripButton9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 51</value>
-  </data>
-  <data name="&gt;&gt;textMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextSizeComboBox.Items6" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;CreateToolStripMenuItem.Name" xml:space="preserve">
-    <value>CreateToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;helpMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveAsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewErrors.Parent" xml:space="preserve">
-    <value>tabPageErrors</value>
-  </data>
-  <data name="TextSizeMenuItem.Text" xml:space="preserve">
-    <value>Размер текста</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Column</value>
-  </data>
-  <data name="&gt;&gt;CloseTabMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AnalysisToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabsStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 30</value>
-  </data>
-  <data name="tabControlResults.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="OpenToolStripMenuItem.Text" xml:space="preserve">
+  <data name="toolStripButton3.ToolTipText" xml:space="preserve">
     <value>Открыть</value>
   </data>
-  <data name="TextSizeComboBox.Items14" xml:space="preserve">
-    <value>48</value>
+  <data name="toolStripButton11.AccessibleDescription" xml:space="preserve">
+    <value />
   </data>
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;PasteToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton11.Name" xml:space="preserve">
-    <value>toolStripButton11</value>
-  </data>
-  <data name="toolStripButton7.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textMenu.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="ClassificationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 26</value>
-  </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>191</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewErrors.ZOrder" xml:space="preserve">
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn4</value>
+  <data name="SourceListToolStripMenuItem.Text" xml:space="preserve">
+    <value>Список литературы</value>
   </data>
-  <data name="ClassificationToolStripMenuItem.Text" xml:space="preserve">
-    <value>Классификация грамматики</value>
+  <data name="&gt;&gt;statusSize.Name" xml:space="preserve">
+    <value>statusSize</value>
   </data>
-  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>786, 152</value>
+  <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="CopyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Копировать</value>
+  <data name="&gt;&gt;CopyToolStripMenuItem.Name" xml:space="preserve">
+    <value>CopyToolStripMenuItem</value>
   </data>
-  <data name="lineNumberBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 191</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="statusPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerLines.Panel1.Parent" xml:space="preserve">
-    <value>splitContainerLines</value>
-  </data>
-  <data name="splitContainerLines.Panel1MinSize" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="regexSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 54</value>
-  </data>
-  <data name="&gt;&gt;tabPageErrors.Name" xml:space="preserve">
-    <value>tabPageErrors</value>
-  </data>
-  <data name="lineNumberBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="localizationMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 24</value>
-  </data>
-  <data name="&gt;&gt;localizationMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TaskToolStripMenuItem.Name" xml:space="preserve">
-    <value>TaskToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton2.Name" xml:space="preserve">
-    <value>toolStripButton2</value>
-  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>435, 17</value>
+  </metadata>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>571, 17</value>
-  </metadata>
-  <metadata name="tabContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>265, 17</value>
-  </metadata>
-  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ru</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>435, 17</value>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="tabsStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
+  </metadata>
+  <metadata name="tabContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>265, 17</value>
   </metadata>
 </root>

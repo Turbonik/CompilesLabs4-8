@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.ComponentModel;
 using compiles_lab_1.Core;
+using compiles_lab_1.Core.Ast;
 using System.Diagnostics;
 
 namespace compiles_lab_1
@@ -30,6 +31,7 @@ namespace compiles_lab_1
         const int SB_THUMBPOSITION = 4;
 
         private FileManager fileManager;
+        private SemanticResult _lastSemanticResult;
 
 
         private class DocumentTab
@@ -67,14 +69,7 @@ namespace compiles_lab_1
 
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F7)
-            {
-                RunSyntaxAnalysis(richTextBox1.Text);
-                e.Handled = true;
-            }
-        }
+     
         private void ScaleUI()
         {
             float baseHeight = 720f;
@@ -340,7 +335,7 @@ namespace compiles_lab_1
                     CloseDocument(currentDocument);
             };
 
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+ 
 
             richTextBox1.TextChanged += (s, e) =>
             {
@@ -438,47 +433,13 @@ namespace compiles_lab_1
             grid.AllowUserToDeleteRows = false;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            grid.AllowUserToResizeColumns = false;
- 
-            grid.Font = new Font("Segoe UI", 10);
 
-            grid.Columns.Add("Fragment", "Найденная подстрока");
-            grid.Columns.Add("Location", "Позиция (строка:символ)");
-            grid.Columns.Add("Length", "Длина");
-
-
-            grid.CellClick += ScannerGrid_CellClick;
-
-            grid.RowPrePaint += (s, e) =>
-            {
-                var row = grid.Rows[e.RowIndex];
-                if (row.Tag is Lexeme lx && lx.Code == LexemeCode.Error)
-                {
-                    row.DefaultCellStyle.BackColor = Color.MistyRose;
-                    row.DefaultCellStyle.ForeColor = Color.DarkRed;
-                    row.DefaultCellStyle.Font = new Font(grid.Font, FontStyle.Bold);
-                }
-            };
-
-            grid.CellClick += (s, e) =>
-            {
-                if (e.RowIndex < 0) return;
-
-                var row = grid.Rows[e.RowIndex];
-                if (row.Tag is SearchResult r)
-                {
-                    ClearHighlight();
-                    HighlightMatch(r.StartIndex, r.Length);
-                }
-            };
-
-
+            grid.Columns.Add("Message", "Сообщение");
+            grid.Columns.Add("Position", "Позиция");
 
             return grid;
         }
- 
+
         private void TabMouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -487,11 +448,14 @@ namespace compiles_lab_1
                 var doc = documents.FirstOrDefault(d => d.Button == btn);
                 if (doc != null)
                 {
-                    SwitchToDocument(doc);
+                    if (currentDocument != doc)  
+                        SwitchToDocument(doc);
+
                     tabContextMenu.Show(Cursor.Position);
                 }
             }
         }
+
 
         private void SwitchToDocument(DocumentTab doc)
         {
@@ -504,10 +468,12 @@ namespace compiles_lab_1
             richTextBox1.Text = doc.Text;
             _internalTextUpdate = false;
 
-            tabPageResults.Controls.Clear();
-            tabPageResults.Controls.Add(doc.ScannerGrid);
+            resultContentPanel.Controls.Clear();
 
-            tabControlResults.SelectedIndex = 0;  
+            if (btnShowAst.Checked)
+                resultContentPanel.Controls.Add(astBox);
+            else
+                resultContentPanel.Controls.Add(doc.ScannerGrid);
 
             foreach (ToolStripButton b in tabsStrip.Items)
                 b.BackColor = SystemColors.Control;
@@ -515,7 +481,10 @@ namespace compiles_lab_1
             doc.Button.BackColor = Color.LightGray;
             UpdateStatus();
         }
- 
+
+
+
+
         private void OpenFile(object sender, EventArgs e)
         {
             if (!CanCreateNewDocument())
@@ -654,7 +623,7 @@ namespace compiles_lab_1
  
             if (currentDocument == doc)
             {
-                tabPageResults.Controls.Clear();
+                resultContentPanel.Controls.Clear();
             }
 
             tabsStrip.Items.Remove(doc.Button);
@@ -902,176 +871,128 @@ namespace compiles_lab_1
         {
             if (currentDocument == null)
             {
-                tabPageResults.Text = "Результат: нет документа";
-                tabPageResults.ImageIndex = 1;
+                MessageBox.Show("Нет документа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string text = richTextBox1.Text;
+            string code = richTextBox1.Text;
 
-            if (string.IsNullOrWhiteSpace(text))
-            {
-                currentDocument.ScannerGrid.Rows.Clear();
-                ClearHighlight();
+            var result = SemanticAnalyzer.Analyze(code);
+            _lastSemanticResult = result;
 
-                tabPageResults.Text = "Результат: нет данных для поиска";
-                tabPageResults.ImageIndex = 1;
-                return;
-            }
+            FillSemanticErrors(result);
+            UpdateAstBox(result);
 
-            int selected = regexSelector.SelectedIndex;
-
-            string pattern = null;
-            AutomatonSearcher automaton = null;
-
-            switch (selected)
-            {
-                case 0:
-                    pattern = RegexLibrary.CloseP;
-                    break;
-
-                case 1:
-                    pattern = RegexLibrary.SnakeCase;
-                    break;
-
-                case 2:
-                    pattern = RegexLibrary.DOI;
-                    break;
-
-                case 3:
-                    automaton = new AutomatonSearcher();
-                    break;
-
-                default:
-                    pattern = RegexLibrary.CloseP;
-                    break;
-            }
-
-            ClearHighlight();
-            currentDocument.ScannerGrid.Rows.Clear();
-
-            List<SearchResult> matches;
+            UpdateResultTabIndicator(result.Errors.Count);
  
-            if (automaton != null)
+        }
+
+
+        private void UpdateAstBox(SemanticResult result)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var node in result.AstNodes)
             {
-                matches = automaton.Find(text);
+                sb.AppendLine(AstPrinter.Print(node));
+                sb.AppendLine();
+            }
+
+            astBox.Text = sb.ToString();
+        }
+
+
+        private void UpdateResultTabIndicator(int errorCount)
+        {
+            if (errorCount == 0)
+            {
+                tabPageResults.ImageIndex = 0;
+                tabPageResults.Text = $"{Strings.Result} — {Strings.Nomistakes}";
             }
             else
             {
-                matches = TextAnalyzer.FindMatches(text, pattern);
-            }
-
-            if (matches.Count == 0)
-            {
-                tabPageResults.Text = "Результат: совпадений нет";
                 tabPageResults.ImageIndex = 1;
-                return;
-            }
 
-            foreach (var r in matches)
+                string word = errorCount == 1 ? Strings.Mistake1 :
+                              errorCount < 5 ? Strings.Mistake2 : Strings.Mistake3;
+
+                tabPageResults.Text = $"{Strings.Result} — {errorCount} {word}";
+            }
+        }
+
+
+
+        private void FillSemanticErrors(SemanticResult result)
+        {
+            var grid = currentDocument.ScannerGrid;
+            grid.Rows.Clear();
+
+            foreach (var err in result.Errors)
             {
-                var row = currentDocument.ScannerGrid.Rows[
-                    currentDocument.ScannerGrid.Rows.Add(
-                        r.Fragment,
-                        $"{r.Line}:{r.Column}",
-                        r.Length.ToString()
-                    )
-                ];
-                row.Tag = r;
+                grid.Rows.Add(
+                    err.Message,
+                    $"строка {err.Line}, символ {err.StartColumn}"
+                );
             }
 
-            tabPageResults.Text = $"Результат: найдено {matches.Count}";
-            tabPageResults.ImageIndex = 0;
-
-            tabControlResults.SelectedIndex = 0;
-        }
-
-
-        private void ScannerGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            var grid = sender as DataGridView;
-
-            var err = grid?.Rows[e.RowIndex].Tag as ParseError;
-            if (err == null) return;
-
-            int targetIndex = GetCharIndexFromLineColumn(err.Line, err.StartColumn);
-            richTextBox1.SelectionStart = targetIndex;
-            richTextBox1.ScrollToCaret();
-
-            richTextBox1.Focus();
-            richTextBox1.SelectionStart = targetIndex;
-            richTextBox1.SelectionLength = Math.Max(1, err.EndColumn - err.StartColumn + 1);
-        }
-
-
-        private int GetCharIndexFromLineColumn(int line, int column)
-        {
-            int index = 0;
-
-            for (int i = 0; i < line - 1; i++)
-                index += richTextBox1.Lines[i].Length + 1;
-
-            index += column - 1;
-            return index;
-        }
+            resultContentPanel.Controls.Clear();
+            resultContentPanel.Controls.Add(currentDocument.ScannerGrid);
+            resultContentPanel.Controls.Add(astBox);
  
+        }
+
+ 
+
+
+
+
         private void tabControlResults_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (currentDocument != null)
                 currentDocument.SelectedResultsTabIndex = tabControlResults.SelectedIndex;
         }
 
-        private void RunSyntaxAnalysis(string code)
+
+        private void BtnShowErrors_Click(object sender, EventArgs e)
         {
-            var result = AntlrWrapper.Analyze(code);
+            if (currentDocument == null) return;
 
-            if (result.Errors.Count == 0)
-            {
-                MessageBox.Show("Синтаксический анализ: OK");
-            }
-            else
-            {
-                var sb = new StringBuilder();
-                sb.AppendLine("Синтаксические ошибки:");
+            btnShowErrors.Checked = true;
+            btnShowAst.Checked = false;
 
-                foreach (var err in result.Errors)
-                {
-                    sb.AppendLine(
-                        $"Строка {err.Line}, {err.StartColumn}-{err.EndColumn}: {err.Message} (\"{err.Fragment}\")");
-                }
-
-                MessageBox.Show(sb.ToString());
-            }
+            resultContentPanel.Controls.Clear();
+            resultContentPanel.Controls.Add(currentDocument.ScannerGrid);
         }
 
 
-
-
-        private void HighlightMatch(int start, int length)
-        { 
-            richTextBox1.Select(start, length);
-            richTextBox1.SelectionBackColor = Color.Yellow;
-            richTextBox1.ScrollToCaret();
- 
-            richTextBox1.Select(start + length, 0);
-            richTextBox1.SelectionBackColor = richTextBox1.BackColor;
-        }
-
-
-
-        private void ClearHighlight()
+        private void BtnShowAst_Click(object sender, EventArgs e)
         {
-            int selStart = richTextBox1.SelectionStart;
-            int selLength = richTextBox1.SelectionLength;
+            if (currentDocument == null) return;
 
-            richTextBox1.SelectAll();
-            richTextBox1.SelectionBackColor = Color.White;
+            btnShowErrors.Checked = false;
+            btnShowAst.Checked = true;
 
-            richTextBox1.Select(selStart, selLength);
+            resultContentPanel.Controls.Clear();
+            resultContentPanel.Controls.Add(astBox);
+            astBox.Visible = true;
+            astBox.BringToFront();
         }
+
+        private void ShowAstMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_lastSemanticResult == null || _lastSemanticResult.AstNodes.Count == 0)
+            {
+                MessageBox.Show("Сначала выполните анализ (F5).", "AST", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            FormAstViewer.ShowAst(_lastSemanticResult);
+        }
+
+
 
 
     }
+
+
 }

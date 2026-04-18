@@ -127,6 +127,29 @@
   <data name="splitContainerLines.Size" type="System.Drawing.Size, System.Drawing">
     <value>794, 180</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="astBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="astBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="astBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="astBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 141</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="astBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="astBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="astBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="tabPageResults.Size" type="System.Drawing.Size, System.Drawing">
     <value>786, 141</value>
   </data>
@@ -136,7 +159,6 @@
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>794, 360</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>180</value>
   </data>
@@ -345,6 +367,22 @@
         7KU2f83mFfN+bjG9gjiR3OeoyCnkQclslMdX455PSPLdYldeUdxS01VBEeH8IjD9IY9b8hawqbCQh8xI
         f6l3qSBAVn6ASnFMsu3ihoiIzvwFfCe31XkB5hcXm99wjmUYtwDMbHhOMTWUYAAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="regexSelector.Items" xml:space="preserve">
+    <value>&lt;/p&gt;</value>
+  </data>
+  <data name="regexSelector.Items1" xml:space="preserve">
+    <value>snake_case</value>
+  </data>
+  <data name="regexSelector.Items3" xml:space="preserve">
+    <value>граф (snake_case)
+</value>
+  </data>
+  <data name="regexSelector.Text" xml:space="preserve">
+    <value>&lt;/p&gt;</value>
+  </data>
+  <data name="regexSelector.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="tabContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 26</value>
