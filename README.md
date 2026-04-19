@@ -39,4 +39,63 @@ const val d: Int = -111111111111111111;
 
 Ошибка: ожидалось число от -2147483648 до 2147483647
 ```
-![Пример](images/RE4.png)
+
+# Структура AST:
+## a) Типы узлов:
+1) ConstDeclNode:
+```
+Атрибуты:
+Name — имя константы
+Modifiers — список модификаторов (const, val)
+Type — тип значения
+Value — значение литерала
+
+Дочерние узлы:
+IntNode, IntLiteralNode
+```
+2) IntNode:
+```
+Атрибуты:
+Name = "Int"
+```
+3) IntLiteralNode
+```
+Атрибуты:
+Value — числовое значение
+```
+## b) Рисунок AST для верной строки:
+Строка: const val i: Int = 5;
+![Пример](images/ASTD.png)
+## c) Формат вывода AST в программе:
+Строка: const val x: Int = 5;
+![Пример](images/ASTP.png)
+
+# Тестовые примеры
+1) Пример №1: нарушение 1 правила:
+![Пример](images/wrong1.png)
+2) Пример №2: нарушение 2 правила:
+![Пример](images/wrong2.png)
+3) Пример №2: нарушение 3 правила:
+![Пример](images/wrong3.png)
+
+# Инструкция по запуску: 
+Путь к исполняемому файлу: "..\bin\Debug\net9.0-windows\compiles_lab_1.exe"
+1) Открыть проект в Visual Studio 2022 (или новее).
+2) Убедиться, что установлен .NET 9.0 SDK.
+3) В меню выбрать: Build → Build Solution
+4) Запустить проект: Debug → Start Debugging
+# Дополнительное задание:
+## Использованные графические средства:
+Визуализация Ast реализована с помощью библиотеки SkiaSharp.
+```
+Необходимые пакеты nudget:
+SkiaSharp
+SkiaSharp.Views.Desktop.Common
+SkiaSharp.Views.WindowsForms
+```
+# Тестовый пример:
+```
+const val x: Int = 5;
+const val y: Int = -5;
+```
+![Пример](images/ASTG.png)
