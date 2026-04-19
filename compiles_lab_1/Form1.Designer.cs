@@ -27,6 +27,7 @@ namespace compiles_lab_1
             richTextBox1 = new RichTextBox();
             tabControlResults = new TabControl();
             tabPageResults = new TabPage();
+            astBox = new RichTextBox();
             menuStrip1 = new MenuStrip();
             fileMenu = new ToolStripMenuItem();
             CreateToolStripMenuItem = new ToolStripMenuItem();
@@ -94,6 +95,7 @@ namespace compiles_lab_1
             splitContainerLines.Panel2.SuspendLayout();
             splitContainerLines.SuspendLayout();
             tabControlResults.SuspendLayout();
+            tabPageResults.SuspendLayout();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             tabContextMenu.SuspendLayout();
@@ -151,11 +153,44 @@ namespace compiles_lab_1
             tabControlResults.Controls.Add(tabPageResults);
             tabControlResults.Name = "tabControlResults";
             tabControlResults.SelectedIndex = 0;
-            // 
             // tabPageResults
-            // 
             resources.ApplyResources(tabPageResults, "tabPageResults");
             tabPageResults.Name = "tabPageResults";
+
+            // === Панель переключения режимов (Ошибки / AST) ===
+            resultModeStrip = new ToolStrip();
+            resultModeStrip.Dock = DockStyle.Top;
+            resultModeStrip.GripStyle = ToolStripGripStyle.Hidden;
+
+            btnShowErrors = new ToolStripButton("Ошибки");
+            btnShowAst = new ToolStripButton("AST");
+
+            btnShowErrors.CheckOnClick = true;
+            btnShowAst.CheckOnClick = true;
+            btnShowErrors.Checked = true;
+
+            btnShowErrors.Click += BtnShowErrors_Click;
+            btnShowAst.Click += BtnShowAst_Click;
+
+            resultModeStrip.Items.Add(btnShowErrors);
+            resultModeStrip.Items.Add(btnShowAst);
+
+            // === Панель-контейнер для таблицы и AST ===
+            resultContentPanel = new Panel();
+            resultContentPanel.Dock = DockStyle.Fill;
+
+            // === AST Box ===
+            astBox = new RichTextBox();
+            astBox.Dock = DockStyle.Fill;
+            astBox.ReadOnly = true;
+            astBox.Font = new Font("Consolas", 10);
+            astBox.Visible = false;
+ 
+            // Добавляем элементы в tabPageResults
+            tabPageResults.Controls.Add(resultContentPanel);
+            tabPageResults.Controls.Add(resultModeStrip);
+
+
             // 
             // menuStrip1
             // 
@@ -306,8 +341,20 @@ namespace compiles_lab_1
             // viewMenu
             // 
             resources.ApplyResources(viewMenu, "viewMenu");
-            viewMenu.DropDownItems.AddRange(new ToolStripItem[] { TextSizeMenuItem });
-            viewMenu.Name = "viewMenu";
+            // === создаём пункт меню ===
+            ShowAstMenuItem = new ToolStripMenuItem();
+            ShowAstMenuItem.Name = "ShowAstMenuItem";
+            ShowAstMenuItem.Text = "Показать AST";
+            ShowAstMenuItem.Click += ShowAstMenuItem_Click;
+
+            // === добавляем в меню ===
+            viewMenu.DropDownItems.AddRange(new ToolStripItem[]
+                {
+                    TextSizeMenuItem,
+                    ShowAstMenuItem
+                });
+
+
             // 
             // TextSizeMenuItem
             // 
@@ -388,12 +435,7 @@ namespace compiles_lab_1
             // 
             resources.ApplyResources(regexSelector, "regexSelector");
             regexSelector.DropDownStyle = ComboBoxStyle.DropDownList;
-            regexSelector.Items.Clear();
-            regexSelector.Items.Add("</p>");
-            regexSelector.Items.Add("snake_case");
-            regexSelector.Items.Add("DOI");
-            regexSelector.Items.Add("граф (snake_case)\r\n");
-            regexSelector.SelectedIndex = 0;
+            regexSelector.Items.AddRange(new object[] { resources.GetString("regexSelector.Items"), resources.GetString("regexSelector.Items1"), resources.GetString("regexSelector.Items2"), resources.GetString("regexSelector.Items3") });
             regexSelector.Name = "regexSelector";
             // 
             // tabsStrip
@@ -498,6 +540,7 @@ namespace compiles_lab_1
             ((System.ComponentModel.ISupportInitialize)splitContainerLines).EndInit();
             splitContainerLines.ResumeLayout(false);
             tabControlResults.ResumeLayout(false);
+            tabPageResults.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
@@ -590,8 +633,15 @@ namespace compiles_lab_1
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Panel resultContentPanel;
+        private ToolStrip resultModeStrip;
+        private ToolStripButton btnShowErrors;
+        private ToolStripButton btnShowAst;
+
+        private ToolStripMenuItem ShowAstMenuItem;
 
         private ToolStripComboBox regexSelector;
+        private RichTextBox astBox;
 
     }
 }
