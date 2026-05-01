@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace compiles_lab_1
 {
@@ -146,49 +147,149 @@ namespace compiles_lab_1
             // 
             resources.ApplyResources(richTextBox1, "richTextBox1");
             richTextBox1.Name = "richTextBox1";
-            // 
-            // tabControlResults
-            // 
-            resources.ApplyResources(tabControlResults, "tabControlResults");
-            tabControlResults.Controls.Add(tabPageResults);
-            tabControlResults.Name = "tabControlResults";
-            tabControlResults.SelectedIndex = 0;
-            // tabPageResults
-            resources.ApplyResources(tabPageResults, "tabPageResults");
-            tabPageResults.Name = "tabPageResults";
+            // === Нижняя панель результатов ===
 
-            // === Панель переключения режимов (Ошибки / AST) ===
-            resultModeStrip = new ToolStrip();
-            resultModeStrip.Dock = DockStyle.Top;
-            resultModeStrip.GripStyle = ToolStripGripStyle.Hidden;
+            // Плашка ошибок
+            statusPanel = new Panel();
+            statusPanel.Height = 28;
+            statusPanel.BackColor = Color.WhiteSmoke;
+            statusPanel.Dock = DockStyle.Top;
 
-            btnShowErrors = new ToolStripButton("Ошибки");
-            btnShowAst = new ToolStripButton("AST");
+            statusIcon = new PictureBox();
+            statusIcon.Size = new Size(20, 20);
+            statusIcon.Location = new Point(5, 4);
+            statusIcon.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            btnShowErrors.CheckOnClick = true;
-            btnShowAst.CheckOnClick = true;
-            btnShowErrors.Checked = true;
+            statusLabel = new Label();
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new Point(30, 6);
+            statusLabel.Font = new Font("Segoe UI", 10);
 
-            btnShowErrors.Click += BtnShowErrors_Click;
-            btnShowAst.Click += BtnShowAst_Click;
+            statusPanel.Controls.Add(statusIcon);
+            statusPanel.Controls.Add(statusLabel);
 
-            resultModeStrip.Items.Add(btnShowErrors);
-            resultModeStrip.Items.Add(btnShowAst);
+            // TabControl
+            tabControlResults = new TabControl();
+            tabControlResults.Dock = DockStyle.Fill;
 
-            // === Панель-контейнер для таблицы и AST ===
-            resultContentPanel = new Panel();
-            resultContentPanel.Dock = DockStyle.Fill;
+            tabPageScanner = new TabPage("Сканер");
+            tabPageParser = new TabPage("Парсер");
+            tabPageResult = new TabPage("Результат");
 
-            // === AST Box ===
-            astBox = new RichTextBox();
-            astBox.Dock = DockStyle.Fill;
-            astBox.ReadOnly = true;
-            astBox.Font = new Font("Consolas", 10);
-            astBox.Visible = false;
+            tabControlResults.TabPages.AddRange(new TabPage[]
+            {
+    tabPageScanner,
+    tabPageParser,
+    tabPageResult
+            });
+
+            // === SplitContainer для результата ===
+            splitResults = new SplitContainer();
+            splitResults.Dock = DockStyle.Fill;
+            splitResults.Orientation = Orientation.Vertical;
+
+            this.Load += (s, e) =>
+            {
+                splitResults.SplitterDistance = splitResults.Width / 2;
+            };
+            splitResults.Resize += (s, e) =>
+            {
+                splitResults.SplitterDistance = splitResults.Width / 2;
+            };
+
+            // === Таблицы ===
+
+            // Сканер
+            gridScanner = new DataGridView();
+            gridScanner.Dock = DockStyle.Fill;
+            gridScanner.ReadOnly = true;
+            gridScanner.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            gridScanner.Columns.Add("TokenCode", "Условный код");
+            gridScanner.Columns.Add("TokenType", "Тип лексемы");
+            gridScanner.Columns.Add("TokenText", "Лексема");
+            gridScanner.Columns.Add("TokenPos", "Местоположение");
+
+            foreach (DataGridViewColumn col in gridScanner.Columns)
+                col.FillWeight = 1;
+
+            gridScanner.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            gridScanner.ColumnHeadersHeight = 48;
+
+            // Парсер
+            gridParser = new DataGridView();
+            gridParser.Dock = DockStyle.Fill;
+            gridParser.ReadOnly = true;
+            gridParser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            gridParser.Columns.Add("BadFragment", "Неверный фрагмент");
+            gridParser.Columns.Add("BadPos", "Местоположение");
+            gridParser.Columns.Add("BadDesc", "Описание");
+
+            foreach (DataGridViewColumn col in gridParser.Columns)
+                col.FillWeight = 1;
+
+            gridParser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            gridParser.ColumnHeadersHeight = 48;
  
-            // Добавляем элементы в tabPageResults
-            tabPageResults.Controls.Add(resultContentPanel);
-            tabPageResults.Controls.Add(resultModeStrip);
+
+            // Тетрады
+            gridTetrads = new DataGridView();
+            gridTetrads.Dock = DockStyle.Fill;
+            gridTetrads.ReadOnly = true;
+            gridTetrads.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            gridTetrads.Columns.Add("Res", "Результат");
+            gridTetrads.Columns.Add("Op", "Операция");
+            gridTetrads.Columns.Add("Arg1", "Операнд 1");
+            gridTetrads.Columns.Add("Arg2", "Операнд 2");
+
+            foreach (DataGridViewColumn col in gridTetrads.Columns)
+                col.FillWeight = 1;
+
+            gridTetrads.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            gridTetrads.ColumnHeadersHeight = 48;
+
+
+            // Правая панель
+            panelRight = new TableLayoutPanel();
+            panelRight.Dock = DockStyle.Fill;
+            panelRight.RowCount = 2;
+            panelRight.ColumnCount = 1;
+            panelRight.RowStyles.Add(new RowStyle(SizeType.Percent, 60));
+            panelRight.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
+
+            richPoliz = new RichTextBox();
+            richPoliz.Dock = DockStyle.Fill;
+            richPoliz.ReadOnly = true;
+            richPoliz.Font = new Font("Consolas", 10);
+
+            richResult = new RichTextBox();
+            richResult.Dock = DockStyle.Fill;
+            richResult.ReadOnly = true;
+            richResult.Font = new Font("Consolas", 10);
+
+            panelRight.Controls.Add(richPoliz, 0, 0);
+            panelRight.Controls.Add(richResult, 0, 1);
+
+            // Добавляем таблицы в вкладки
+            tabPageScanner.Controls.Add(gridScanner);
+            tabPageParser.Controls.Add(gridParser);
+
+            splitResults.Panel1.Controls.Add(gridTetrads);
+            splitResults.Panel2.Controls.Add(panelRight);
+
+            tabPageResult.Controls.Add(splitResults);
+
+            // === Добавляем в правую панель формы ===
+
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(tabControlResults); // Fill
+            splitContainer1.Panel2.Controls.Add(statusPanel);        // Top
+
+
+
+
 
 
             // 
@@ -341,17 +442,12 @@ namespace compiles_lab_1
             // viewMenu
             // 
             resources.ApplyResources(viewMenu, "viewMenu");
-            // === создаём пункт меню ===
-            ShowAstMenuItem = new ToolStripMenuItem();
-            ShowAstMenuItem.Name = "ShowAstMenuItem";
-            ShowAstMenuItem.Text = "Показать AST";
-            ShowAstMenuItem.Click += ShowAstMenuItem_Click;
+     
 
             // === добавляем в меню ===
             viewMenu.DropDownItems.AddRange(new ToolStripItem[]
                 {
-                    TextSizeMenuItem,
-                    ShowAstMenuItem
+                    TextSizeMenuItem
                 });
 
 
@@ -639,9 +735,24 @@ namespace compiles_lab_1
         private ToolStripButton btnShowAst;
 
         private ToolStripMenuItem ShowAstMenuItem;
+        private TabPage tabPageScanner;
+        private TabPage tabPageParser;
+        private TabPage tabPageResult;
 
+        private DataGridView gridScanner;
+        private DataGridView gridParser;
+        private DataGridView gridTetrads;
+
+        private SplitContainer splitResults;
+
+        private TableLayoutPanel panelRight;
+        private RichTextBox richPoliz;
+        private RichTextBox richResult;
         private ToolStripComboBox regexSelector;
         private RichTextBox astBox;
+        private Panel statusPanel;
+        private PictureBox statusIcon;
+        private Label statusLabel;
 
     }
 }

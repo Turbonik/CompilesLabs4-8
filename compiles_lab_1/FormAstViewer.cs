@@ -48,16 +48,6 @@ namespace compiles_lab_1
             );
         }
 
-        public static void ShowAst(SemanticResult result)
-        {
-            if (result == null || result.AstNodes.Count == 0)
-            {
-                MessageBox.Show("AST пустой", "AST", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            var form = new FormAstViewer(result.AstNodes);
-            form.Show();
-        }
+    
     }
 }

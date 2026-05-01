@@ -1,40 +1,34 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace compiles_lab_1.Core
 {
-    public enum LexemeCode
+    public class ScannerRow
     {
-        Integer = 1,
-        KeywordInt = 2,
-        KeywordConst = 3,
-        KeywordVal = 4,
-        Identifier = 5,
-        Colon = 6,
-        Assign = 7,
-        Semicolon = 8,
-        Minus = 9,
-        Error = 11
+        public string TokenCode { get; set; }
+        public string TokenType { get; set; }
+        public string Lexeme { get; set; }
+        public string Location { get; set; }
     }
 
-    public class Lexeme
+    public static class ScannerModel
     {
-        public LexemeCode Code { get; set; }
-        public string Type { get; set; }  
-        public string Text { get; set; }  
-        public int Line { get; set; } 
-        public int StartColumn { get; set; } 
-        public int EndColumn { get; set; }  
-    }
-    
- 
-    public class ScanResult
-    {
-        public List<Lexeme> Lexemes { get; } = new();
+        public static List<ScannerRow> FromScanResult(ScanResult scan)
+        {
+            var list = new List<ScannerRow>();
 
+            foreach (var lex in scan.Lexemes)
+            {
+                list.Add(new ScannerRow
+                {
+                    TokenCode = ((int)lex.Code).ToString(),
+                    TokenType = lex.Type,
+                    Lexeme = lex.Text,
+                    Location = $"{lex.Line}:{lex.StartColumn}-{lex.EndColumn}"
+                });
+            }
+
+            return list;
+        }
     }
 }
-

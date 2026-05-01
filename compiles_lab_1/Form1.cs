@@ -31,9 +31,7 @@ namespace compiles_lab_1
         const int SB_THUMBPOSITION = 4;
 
         private FileManager fileManager;
-        private SemanticResult _lastSemanticResult;
-
-
+ 
         private class DocumentTab
         {
             public int SelectedResultsTabIndex = 0;
@@ -54,6 +52,7 @@ namespace compiles_lab_1
         private readonly List<DocumentTab> documents = new();
         private DocumentTab currentDocument;
         private bool _internalTextUpdate = false;
+        private ScanResult scanResult;
 
         public Form1()
         {
@@ -208,8 +207,7 @@ namespace compiles_lab_1
 
             CloseTabMenuItem.Text = Strings.CloseTab;
             ScaleUI();
-
-            tabPageResults.ImageIndex = 0;
+ 
         }
 
         private void ApplyResourcesRecursive(Control control, ComponentResourceManager res)
@@ -257,7 +255,6 @@ namespace compiles_lab_1
             resultIcons.Images.Add("error", Image.FromFile(Path.Combine(basePath, "error.png")));  
 
             tabControlResults.ImageList = resultIcons;
-            tabPageResults.ImageIndex = 0;
 
             richTextBox1.DetectUrls = false;
 
@@ -467,13 +464,7 @@ namespace compiles_lab_1
             _internalTextUpdate = true;
             richTextBox1.Text = doc.Text;
             _internalTextUpdate = false;
-
-            resultContentPanel.Controls.Clear();
-
-            if (btnShowAst.Checked)
-                resultContentPanel.Controls.Add(astBox);
-            else
-                resultContentPanel.Controls.Add(doc.ScannerGrid);
+ 
 
             foreach (ToolStripButton b in tabsStrip.Items)
                 b.BackColor = SystemColors.Control;
@@ -621,10 +612,7 @@ namespace compiles_lab_1
                 }
             }
  
-            if (currentDocument == doc)
-            {
-                resultContentPanel.Controls.Clear();
-            }
+ 
 
             tabsStrip.Items.Remove(doc.Button);
             documents.Remove(doc);
@@ -639,7 +627,6 @@ namespace compiles_lab_1
                 richTextBox1.Clear();
                 richTextBox1.Enabled = false;
  
-                tabPageResults.Controls.Clear();
             }
         }
 
@@ -877,74 +864,92 @@ namespace compiles_lab_1
 
             string code = richTextBox1.Text;
 
-            var result = SemanticAnalyzer.Analyze(code);
-            _lastSemanticResult = result;
+            var scanner = new Scanner();
+            scanResult = scanner.Scan(code);
 
-            FillSemanticErrors(result);
-            UpdateAstBox(result);
+            FillScannerTable(scanResult);
 
-            UpdateResultTabIndicator(result.Errors.Count);
- 
+            var parser = new Parser(scanResult.Lexemes);
+            var parserResult = parser.Parse();
+
+            UpdateStatusIndicator(parserResult);
+
+            FillParserTable(parserResult);
+
+            if (parserResult.Success)
+                FillResultTables();
+            else
+                ClearResultTables();
         }
 
-
-        private void UpdateAstBox(SemanticResult result)
+        private void UpdateStatusIndicator(ParserResult result)
         {
-            var sb = new StringBuilder();
-
-            foreach (var node in result.AstNodes)
+            if (result.Success)
             {
-                sb.AppendLine(AstPrinter.Print(node));
-                sb.AppendLine();
-            }
-
-            astBox.Text = sb.ToString();
-        }
-
-
-        private void UpdateResultTabIndicator(int errorCount)
-        {
-            if (errorCount == 0)
-            {
-                tabPageResults.ImageIndex = 0;
-                tabPageResults.Text = $"{Strings.Result} Ч {Strings.Nomistakes}";
+                statusIcon.Image = resultIcons.Images["ok"];
+                statusLabel.Text = "ќшибок нет";
+                statusLabel.ForeColor = Color.DarkGreen;
             }
             else
             {
-                tabPageResults.ImageIndex = 1;
+                statusIcon.Image = resultIcons.Images["error"];
 
-                string word = errorCount == 1 ? Strings.Mistake1 :
-                              errorCount < 5 ? Strings.Mistake2 : Strings.Mistake3;
+                int count = result.Errors.Count;
+                string word = count == 1 ? "ошибка" :
+                              count < 5 ? "ошибки" : "ошибок";
 
-                tabPageResults.Text = $"{Strings.Result} Ч {errorCount} {word}";
+                statusLabel.Text = $"{count} {word}";
+                statusLabel.ForeColor = Color.DarkRed;
             }
         }
 
 
-
-        private void FillSemanticErrors(SemanticResult result)
+        private void FillScannerTable(ScanResult scan)
         {
-            var grid = currentDocument.ScannerGrid;
-            grid.Rows.Clear();
+            gridScanner.Rows.Clear();
 
-            foreach (var err in result.Errors)
+            foreach (var row in ScannerModel.FromScanResult(scan))
+                gridScanner.Rows.Add(row.TokenCode, row.TokenType, row.Lexeme, row.Location);
+        }
+
+        private void FillParserTable(ParserResult result)
+        {
+            gridParser.Rows.Clear();
+
+            if (!result.Success)
             {
-                grid.Rows.Add(
-                    err.Message,
-                    $"строка {err.Line}, символ {err.StartColumn}"
-                );
+                var e = result.Errors[0];
+                gridParser.Rows.Add(e.Fragment, e.Location, e.Description);
             }
+        }
 
-            resultContentPanel.Controls.Clear();
-            resultContentPanel.Controls.Add(currentDocument.ScannerGrid);
-            resultContentPanel.Controls.Add(astBox);
+        private void FillResultTables()
+        {
+            gridTetrads.Rows.Clear();
+            richPoliz.Text = "";
+            richResult.Text = "";
+             
+            var poliz = ExpressionAlter.BuildPoliz(scanResult.Lexemes);
+            richPoliz.Text = string.Join(" ", poliz);
  
+            var tetrads = ExpressionAlter.BuildTetrads(poliz);
+
+            foreach (var t in tetrads)
+                gridTetrads.Rows.Add(t.Result, t.Operation, t.Arg1, t.Arg2);
+ 
+            int result = ExpressionAlter.EvalPoliz(poliz);
+            richResult.Text = $"–езультат: {result}";
+        }
+
+
+        private void ClearResultTables()
+        {
+            gridTetrads.Rows.Clear();
+            richPoliz.Text = "";
+            richResult.Text = "";
         }
 
  
-
-
-
 
         private void tabControlResults_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -952,45 +957,7 @@ namespace compiles_lab_1
                 currentDocument.SelectedResultsTabIndex = tabControlResults.SelectedIndex;
         }
 
-
-        private void BtnShowErrors_Click(object sender, EventArgs e)
-        {
-            if (currentDocument == null) return;
-
-            btnShowErrors.Checked = true;
-            btnShowAst.Checked = false;
-
-            resultContentPanel.Controls.Clear();
-            resultContentPanel.Controls.Add(currentDocument.ScannerGrid);
-        }
-
-
-        private void BtnShowAst_Click(object sender, EventArgs e)
-        {
-            if (currentDocument == null) return;
-
-            btnShowErrors.Checked = false;
-            btnShowAst.Checked = true;
-
-            resultContentPanel.Controls.Clear();
-            resultContentPanel.Controls.Add(astBox);
-            astBox.Visible = true;
-            astBox.BringToFront();
-        }
-
-        private void ShowAstMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_lastSemanticResult == null || _lastSemanticResult.AstNodes.Count == 0)
-            {
-                MessageBox.Show("—начала выполните анализ (F5).", "AST", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            FormAstViewer.ShowAst(_lastSemanticResult);
-        }
-
-
-
+ 
 
     }
 

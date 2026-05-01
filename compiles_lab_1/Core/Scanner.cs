@@ -1,173 +1,187 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace compiles_lab_1.Core
 {
-    public static class Scanner
+    public enum LexemeCode
     {
-        static bool IsLatinLetter(char c) =>
-            (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+        Plus = 1,
+        Minus = 2,
+        Star = 3,
+        Slash = 4,
+        Percent = 5,
+        LParen = 6,
+        RParen = 7,
+        Identifier = 8,
+        Number = 9,
+        Error = 10
+    }
 
-        public static ScanResult Analyze(string source)
+
+    public class Lexeme
+    {
+        public LexemeCode Code { get; set; }
+        public string Type { get; set; }
+        public string Text { get; set; }
+        public int Line { get; set; }
+        public int StartColumn { get; set; }
+        public int EndColumn { get; set; }
+    }
+
+    public class ScanResult
+    {
+        public List<Lexeme> Lexemes { get; } = new();
+    }
+
+    public class Scanner
+    {
+        private bool IsLatinLetter(char c)
+        {
+            return (c >= 'A' && c <= 'Z') ||
+                   (c >= 'a' && c <= 'z');
+        }
+
+        private bool IsValidSingle(char c)
+        {
+            return c == '+' || c == '-' || c == '*' || c == '/' ||
+                   c == '%' || c == '(' || c == ')';
+        }
+
+        public ScanResult Scan(string text)
         {
             var result = new ScanResult();
             int line = 1, col = 1, i = 0;
 
-            while (i < source.Length)
+            while (i < text.Length)
             {
-                char ch = source[i];
+                char c = text[i];
 
-                if (ch == '\n')
-                {
-                    line++; col = 1; i++;
-                    continue;
-                }
+                if (c == '\r') { i++; continue; }
+                if (c == '\n') { line++; col = 1; i++; continue; }
+                if (char.IsWhiteSpace(c)) { col++; i++; continue; }
 
-                if (ch == ' ' || ch == '\t')
+                int start = col;
+
+                if (IsLatinLetter(c))
                 {
+                    var sb = new StringBuilder();
+                    sb.Append(c);
                     i++; col++;
-                    continue;
-                }
 
-                if (i + 6 <= source.Length &&
-                    source.AsSpan(i, 5).SequenceEqual("const".AsSpan()) &&
-                    source[i + 5] == ' ')
-                {
-                    result.Lexemes.Add(new Lexeme
+                    while (i < text.Length)
                     {
-                        Code = LexemeCode.KeywordConst,
-                        Type = Strings.Keyword,
-                        Text = "const",
-                        Line = line,
-                        StartColumn = col,
-                        EndColumn = col + 4
-                    });
-                    i += 6; col += 6;
-                    continue;
-                }
-
-                if (i + 4 <= source.Length &&
-                    source.AsSpan(i, 3).SequenceEqual("val".AsSpan()) &&
-                    source[i + 3] == ' ')
-                {
-                    result.Lexemes.Add(new Lexeme
-                    {
-                        Code = LexemeCode.KeywordVal,
-                        Type = Strings.Keyword,
-                        Text = "val",
-                        Line = line,
-                        StartColumn = col,
-                        EndColumn = col + 2
-                    });
-                    i += 4; col += 4;
-                    continue;
-                }
-
-                if (i + 3 <= source.Length &&
-                    source.AsSpan(i, 3).SequenceEqual("Int".AsSpan()))
-                {
-                    result.Lexemes.Add(new Lexeme
-                    {
-                        Code = LexemeCode.KeywordInt,
-                        Type = Strings.Keyword,
-                        Text = "Int",
-                        Line = line,
-                        StartColumn = col,
-                        EndColumn = col + 2
-                    });
-                    i += 3; col += 3;
-                    continue;
-                }
-
-                if (char.IsDigit(ch))
-                {
-                    int startCol = col, startIndex = i;
-                    while (i < source.Length && char.IsDigit(source[i]))
-                    {
-                        i++; col++;
+                        char ch = text[i];
+                        if (IsLatinLetter(ch) || char.IsDigit(ch) || ch == '_')
+                        {
+                            sb.Append(ch);
+                            i++; col++;
+                        }
+                        else break;
                     }
-                    result.Lexemes.Add(new Lexeme
-                    {
-                        Code = LexemeCode.Integer,
-                        Type = Strings.Integer,
-                        Text = source.Substring(startIndex, i - startIndex),
-                        Line = line,
-                        StartColumn = startCol,
-                        EndColumn = col - 1
-                    });
-                    continue;
-                }
 
-                if (IsLatinLetter(ch) || ch == '_')
-                {
-                    int startCol = col, startIndex = i;
-                    while (i < source.Length &&
-                          (IsLatinLetter(source[i]) || char.IsDigit(source[i]) || source[i] == '_'))
-                    {
-                        i++; col++;
-                    }
                     result.Lexemes.Add(new Lexeme
                     {
                         Code = LexemeCode.Identifier,
-                        Type = Strings.Identifier,
-                        Text = source.Substring(startIndex, i - startIndex),
+                        Type = "id",
+                        Text = sb.ToString(),
                         Line = line,
-                        StartColumn = startCol,
+                        StartColumn = start,
                         EndColumn = col - 1
                     });
+
                     continue;
                 }
 
-                if (ch == ':' || ch == '=' || ch == ';' || ch == '-')
+                if (char.IsDigit(c))
                 {
-                    LexemeCode code =
-                        ch == ':' ? LexemeCode.Colon :
-                        ch == '=' ? LexemeCode.Assign :
-                        ch == ';' ? LexemeCode.Semicolon :
-                        LexemeCode.Minus;
+                    var sb = new StringBuilder();
+                    sb.Append(c);
+                    i++; col++;
 
-                    string type =
-                        ch == ':' ? Strings.DeclareOperator :
-                        ch == '=' ? Strings.EqualsOperator :
-                        ch == ';' ? Strings.EndOperator :
-                        Strings.SubstractionOperator;
+                    while (i < text.Length && char.IsDigit(text[i]))
+                    {
+                        sb.Append(text[i]);
+                        i++; col++;
+                    }
 
                     result.Lexemes.Add(new Lexeme
                     {
-                        Code = code,
-                        Type = type,
-                        Text = ch.ToString(),
+                        Code = LexemeCode.Number,
+                        Type = "num",
+                        Text = sb.ToString(),
                         Line = line,
-                        StartColumn = col,
-                        EndColumn = col
+                        StartColumn = start,
+                        EndColumn = col - 1
                     });
 
+                    continue;
+                }
+
+                Lexeme Add(LexemeCode code, string type)
+                {
+                    return new Lexeme
+                    {
+                        Code = code,
+                        Type = type,
+                        Text = c.ToString(),
+                        Line = line,
+                        StartColumn = start,
+                        EndColumn = start
+                    };
+                }
+
+                if (IsValidSingle(c))
+                {
+                    LexemeCode code =
+                        c == '+' ? LexemeCode.Plus :
+                        c == '-' ? LexemeCode.Minus :
+                        c == '*' ? LexemeCode.Star :
+                        c == '/' ? LexemeCode.Slash :
+                        c == '%' ? LexemeCode.Percent :
+                        c == '(' ? LexemeCode.LParen :
+                                   LexemeCode.RParen;
+
+                    string type =
+                        c == '+' ? "plus" :
+                        c == '-' ? "minus" :
+                        c == '*' ? "star" :
+                        c == '/' ? "slash" :
+                        c == '%' ? "percent" :
+                        c == '(' ? "lparen" :
+                                   "rparen";
+
+                    result.Lexemes.Add(Add(code, type));
                     i++; col++;
                     continue;
                 }
 
-                int errStartCol = col, errStartIndex = i;
-                while (i < source.Length)
-                {
-                    char c = source[i];
-                    bool ok =
-                        char.IsDigit(c) ||
-                        IsLatinLetter(c) ||
-                        c == '_' || c == ':' || c == '=' ||
-                        c == ';' || c == '-' ||
-                        c == ' ' || c == '\t' || c == '\n';
-                    if (ok) break;
-                    i++; col++;
-                }
+                var err = new StringBuilder();
+                err.Append(c);
+                i++; col++;
 
-                string bad = source.Substring(errStartIndex, i - errStartIndex);
+                while (i < text.Length)
+                {
+                    char ch = text[i];
+
+                    if (!IsLatinLetter(ch) &&
+                        !char.IsDigit(ch) &&
+                        !char.IsWhiteSpace(ch) &&
+                        !IsValidSingle(ch))
+                    {
+                        err.Append(ch);
+                        i++; col++;
+                    }
+                    else break;
+                }
 
                 result.Lexemes.Add(new Lexeme
                 {
                     Code = LexemeCode.Error,
-                    Type = Strings.Error,
-                    Text = bad,
+                    Type = "error",
+                    Text = err.ToString(),
                     Line = line,
-                    StartColumn = errStartCol,
+                    StartColumn = start,
                     EndColumn = col - 1
                 });
             }
