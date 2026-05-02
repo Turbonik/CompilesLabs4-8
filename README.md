@@ -141,8 +141,62 @@ attributes #2 = { nofree nounwind "no-trapping-math"="true" "stack-protector-buf
 ```
 - **Сравнение оптимизаций**
 > diff main_O0.ll main_O2.ll
-![Пример](images/dif1.png) 
-![Пример](images/dif2.png)
+```
+8,15c8,11
+< ; Function Attrs: noinline nounwind optnone uwtable
+< define dso_local i32 @square(i32 noundef %0) #0 {
+<   %2 = alloca i32, align 4
+<   store i32 %0, ptr %2, align 4
+<   %3 = load i32, ptr %2, align 4
+<   %4 = load i32, ptr %2, align 4
+<   %5 = mul nsw i32 %3, %4
+<   ret i32 %5
+---
+> ; Function Attrs: mustprogress nofree norecurse nosync nounwind willreturn memory(none) uwtable
+> define dso_local i32 @square(i32 noundef %0) local_unnamed_addr #0 {
+>   %2 = mul nsw i32 %0, %0
+>   ret i32 %2
+18,29c14,16
+< ; Function Attrs: noinline nounwind optnone uwtable
+< define dso_local i32 @main() #0 {
+<   %1 = alloca i32, align 4
+<   %2 = alloca i32, align 4
+<   %3 = alloca i32, align 4
+<   store i32 0, ptr %1, align 4
+<   store i32 5, ptr %2, align 4
+<   %4 = load i32, ptr %2, align 4
+<   %5 = call i32 @square(i32 noundef %4)
+<   store i32 %5, ptr %3, align 4
+<   %6 = load i32, ptr %3, align 4
+<   %7 = call i32 (ptr, ...) @printf(ptr noundef @.str, i32 noundef %6)
+---
+> ; Function Attrs: nofree nounwind uwtable
+> define dso_local noundef i32 @main() local_unnamed_addr #1 {
+>   %1 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1) @.str, i32 noundef 25)
+33c20,21
+< declare i32 @printf(ptr noundef, ...) #1
+---
+> ; Function Attrs: nofree nounwind
+> declare noundef i32 @printf(ptr nocapture noundef readonly, ...) local_unnamed_addr #2
+35,36c23,25
+< attributes #0 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+< attributes #1 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+---
+> attributes #0 = { mustprogress nofree norecurse nosync nounwind willreturn memory(none) uwtable "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+> attributes #1 = { nofree nounwind uwtable "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+> attributes #2 = { nofree nounwind "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+38,39c27,28
+< !llvm.module.flags = !{!0, !1, !2, !3, !4}
+< !llvm.ident = !{!5}
+---
+> !llvm.module.flags = !{!0, !1, !2, !3}
+> !llvm.ident = !{!4}
+45,46c34
+< !4 = !{i32 7, !"frame-pointer", i32 2}
+< !5 = !{!"Ubuntu clang version 18.1.3 (1ubuntu1)"}
+---
+> !4 = !{!"Ubuntu clang version 18.1.3 (1ubuntu1)"}
+```
 
 ### Изменения после оптимизации:
 1) Переменные типа alloca были удалены;
@@ -283,9 +337,9 @@ attributes #0 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-l
 ![Пример](images/cfg1.jpg)
 ![Пример](images/cfg2.jpg)
 - Граф для -O0:
-![Пример](images/O0.png)
+![Пример](images/O0.jpg)
 - Граф для -O2:
-![Пример](images/O2.png)
+![Пример](images/O2.jpg)
 > В варианте без оптимизаций (O0) функция main имеет полноценную структуру управления:
 > присутствуют несколько базовых блоков: входной блок, блок проверки условия, блок тела цикла, блок инкремента и блок выхода;
 > управление передаётся по циклу while, что отражено в виде обратного ребра из блока инкремента обратно в блок условия;
@@ -308,7 +362,7 @@ icmp slt i32 %5, 100
 @LIMIT = dso_local local_unnamed_addr constant i32 100,
 то есть ее адрес в рамках модуля не имеет значения.
 ```
-> Таким образом, подстановка константы происходит рано (на уровне фронтенда),
+> Таким образом, подстановка константы происходит рано на уровне фронтенда clang,
 > а полное использование этой константы для свёртывания цикла — на стадии -O2.
 
 ## Выводы
