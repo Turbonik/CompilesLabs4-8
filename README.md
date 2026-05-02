@@ -145,19 +145,130 @@ attributes #2 = { nofree nounwind "no-trapping-math"="true" "stack-protector-buf
 ![Пример](images/dif2.png)
 
 ### Изменения после оптимизации:
-● Переменные типа alloca были удалены;
-● Код переведён в SSA-форму;
-● Оптимизация улучшила читаемость и упростила поток
+1) Переменные типа alloca были удалены;
+2) Код переведён в SSA-форму;
+3) Оптимизация улучшила читаемость и упростила поток
 управления.
 
 ## Построение CFG для оптимизированного LLVM IR:
-** Команды для генерации CFG: **
+**Команды для генерации CFG:**
 ![Пример](images/cfg.jpg)
 - CFG main в PNG-формате:
 ![Пример](images/main_O2.png)  
 - CFG square в PNG-формате:
 ![Пример](images/square_O2.png)  
 
+# Индивидуальное задание:
+- программа варианта:
+![Пример](images/ind_code.jpg)
+1) Получение IR -O0:
+> clang -O0 -S -emit-llvm indTask.c -o indTask_O0.ll
+```
+; ModuleID = 'indtask.c'
+source_filename = "indtask.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@LIMIT = dso_local constant i32 100, align 4
+
+; Function Attrs: noinline nounwind optnone uwtable
+define dso_local i32 @main() #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  store i32 0, ptr %1, align 4
+  store i32 0, ptr %2, align 4
+  store i32 0, ptr %3, align 4
+  br label %4
+
+4:                                                ; preds = %11, %0
+  %5 = load i32, ptr %3, align 4
+  %6 = icmp slt i32 %5, 100
+  br i1 %6, label %7, label %14
+
+7:                                                ; preds = %4
+  %8 = load i32, ptr %3, align 4
+  %9 = load i32, ptr %2, align 4
+  %10 = add nsw i32 %9, %8
+  store i32 %10, ptr %2, align 4
+  br label %11
+
+11:                                               ; preds = %7
+  %12 = load i32, ptr %3, align 4
+  %13 = add nsw i32 %12, 1
+  store i32 %13, ptr %3, align 4
+  br label %4, !llvm.loop !6
+
+14:                                               ; preds = %4
+  %15 = load i32, ptr %2, align 4
+  ret i32 %15
+}
+
+attributes #0 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+
+!llvm.module.flags = !{!0, !1, !2, !3, !4}
+!llvm.ident = !{!5}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 8, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 2}
+!4 = !{i32 7, !"frame-pointer", i32 2}
+!5 = !{!"Ubuntu clang version 18.1.3 (1ubuntu1)"}
+!6 = distinct !{!6, !7}
+!7 = !{!"llvm.loop.mustprogress"}
+```
+2) Получение IR -O2:
+> clang -O2 -S -emit-llvm indTask.c -o indTask_O0.ll
+![Пример](images/indTaskO2.jpg)
+- Изменение Limit:
+```
+< @LIMIT = dso_local constant i32 100
+> @LIMIT = dso_local local_unnamed_addr constant i32 100
+```
+> В -O2 появился атрибут local_unnamed_addr, 
+> это означает, что адрес объекта не имеет значения в пределах модуля,
+> а его значение уже было подставлено в цикл main функции.
+> Но сама переменная не исчезла.
+```
+< ; Function Attrs: noinline nounwind optnone uwtable
+< define dso_local i32 @main() #0 {
+<   %1 = alloca i32, align 4
+<   %2 = alloca i32, align 4
+<   %3 = alloca i32, align 4
+<   store i32 0, ptr %1, align 4
+<   store i32 0, ptr %2, align 4
+<   store i32 0, ptr %3, align 4
+<   br label %4
+< 
+< 4:                                                ; preds = %11, %0
+<   %5 = load i32, ptr %3, align 4
+<   %6 = icmp slt i32 %5, 100
+<   br i1 %6, label %7, label %14
+< 
+< 7:                                                ; preds = %4
+<   %8 = load i32, ptr %3, align 4
+<   %9 = load i32, ptr %2, align 4
+<   %10 = add nsw i32 %9, %8
+<   store i32 %10, ptr %2, align 4
+<   br label %11
+< 
+< 11:                                               ; preds = %7
+<   %12 = load i32, ptr %3, align 4
+<   %13 = add nsw i32 %12, 1
+<   store i32 %13, ptr %3, align 4
+<   br label %4, !llvm.loop !6
+< 
+< 14:                                               ; preds = %4
+<   %15 = load i32, ptr %2, align 4
+<   ret i32 %15
+---
+> ; Function Attrs: mustprogress nofree norecurse nosync nounwind willreturn memory(none) uwtable
+> define dso_local noundef i32 @main() local_unnamed_addr #0 {
+>   ret i32 4950
+```
+> Цикл был распознан как чистая арифметика, сумма была вычислена на этапе компиляции.
+> Поэтому весь main свелся к функции возврата ret i32 4950
 ## Выводы
 1) Что такое Clang?  
 > Фронтенд компилятора для C/C++/Objective‑C, который превращает исходный код в AST и LLVM IR.
@@ -184,4 +295,3 @@ attributes #2 = { nofree nounwind "no-trapping-math"="true" "stack-protector-buf
 12) Преимущества IR и CFG перед анализом исходного C‑кода  
 > Они проще, формальнее и однозначнее, что позволяет автоматизировать оптимизации и анализ без сложностей синтаксиса.
 
-# Индивидуальное задание:
