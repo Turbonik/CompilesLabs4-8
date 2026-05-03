@@ -876,7 +876,7 @@ namespace compiles_lab_1
 
             FillParserTable(parserResult);
 
-            if (parserResult.Success)
+            if (parserResult.Success && !(code == ""))
                 FillResultTables();
             else
                 ClearResultTables();
@@ -898,7 +898,7 @@ namespace compiles_lab_1
                 string word = count == 1 ? "ошибка" :
                               count < 5 ? "ошибки" : "ошибок";
 
-                statusLabel.Text = $"{count} {word}";
+                statusLabel.Text = $"{word}!";
                 statusLabel.ForeColor = Color.DarkRed;
             }
         }
@@ -928,18 +928,24 @@ namespace compiles_lab_1
             gridTetrads.Rows.Clear();
             richPoliz.Text = "";
             richResult.Text = "";
-             
+
             var poliz = ExpressionAlter.BuildPoliz(scanResult.Lexemes);
-            richPoliz.Text = string.Join(" ", poliz);
- 
+            richPoliz.Text = "Полиз: ";
+            richPoliz.Text += string.Join(" ", poliz);
+
             var tetrads = ExpressionAlter.BuildTetrads(poliz);
 
             foreach (var t in tetrads)
                 gridTetrads.Rows.Add(t.Result, t.Operation, t.Arg1, t.Arg2);
- 
-            int result = ExpressionAlter.EvalPoliz(poliz);
-            richResult.Text = $"Результат: {result}";
-        }
+            try {
+                int result = ExpressionAlter.EvalPoliz(poliz);
+                richResult.Text = $"Результат: {result}";
+            }
+            catch
+            {
+                richResult.Text = "Результат: выражение содержит переменные";
+            }
+     }
 
 
         private void ClearResultTables()
