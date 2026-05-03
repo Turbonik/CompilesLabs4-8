@@ -358,9 +358,9 @@ sudo apt install clang llvm graphviz
 ```
 ## **Код задания:**
 ![Пример](images/main_code.jpg)
-- **Получение AST**
+> **Получение AST**
 ![Пример](images/MainAST.jpg) 
-- **промежуточное представление LLVM IR O0**
+> **промежуточное представление LLVM IR O0**
  > clang -O0 -S -emit-llvm main.c -o main_O0.ll
 ```
 ; ModuleID = 'main.c'
@@ -516,13 +516,13 @@ attributes #2 = { nofree nounwind "no-trapping-math"="true" "stack-protector-buf
 ## Построение CFG для оптимизированного LLVM IR:
 **Команды для генерации CFG:**
 ![Пример](images/cfg.jpg)
-- CFG main в PNG-формате:
-![Пример](images/main_O2.png)  
-- CFG square в PNG-формате:
+### CFG main в PNG-формате:
+![Пример](images/main_O2.png)
+### CFG square в PNG-формате:
 ![Пример](images/square_O2.png)  
 
 # Индивидуальное задание:
-- программа варианта:
+> программа варианта:
 ![Пример](images/ind_code.jpg)
 1) Получение IR -O0:
 > clang -O0 -S -emit-llvm indTask.c -o indTask_O0.ll
@@ -645,10 +645,14 @@ attributes #0 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-l
 > Команды получения .png:
 ![Пример](images/cfg1.jpg)
 ![Пример](images/cfg2.jpg)
-- Граф для -O0:
+### Граф для -O0:
 ![Пример](images/O0.jpg)
-- Граф для -O2:
+
+
+### Граф для -O2:
 ![Пример](images/O2.jpg)
+
+
 > В варианте без оптимизаций (O0) функция main имеет полноценную структуру управления:
 > присутствуют несколько базовых блоков: входной блок, блок проверки условия, блок тела цикла, блок инкремента и блок выхода;
 > управление передаётся по циклу while, что отражено в виде обратного ребра из блока инкремента обратно в блок условия;
