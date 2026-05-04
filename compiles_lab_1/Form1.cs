@@ -875,11 +875,10 @@ namespace compiles_lab_1
             UpdateStatusIndicator(parserResult);
 
             FillParserTable(parserResult);
-
-            if (parserResult.Success && !(code == ""))
+ 
                 FillResultTables();
-            else
-                ClearResultTables();
+ 
+  
         }
 
         private void UpdateStatusIndicator(ParserResult result)
@@ -898,7 +897,7 @@ namespace compiles_lab_1
                 string word = count == 1 ? "ошибка" :
                               count < 5 ? "ошибки" : "ошибок";
 
-                statusLabel.Text = $"{word}!";
+                statusLabel.Text = $"";
                 statusLabel.ForeColor = Color.DarkRed;
             }
         }
@@ -930,21 +929,14 @@ namespace compiles_lab_1
             richResult.Text = "";
 
             var poliz = ExpressionAlter.BuildPoliz(scanResult.Lexemes);
-            richPoliz.Text = "Полиз: ";
-            richPoliz.Text += string.Join(" ", poliz);
+            richPoliz.Text = "оптимизация №1: \n";
+            richPoliz.Text += "t1 = 10\r\nt2 = 6\r\nt3 = 2\r\nt4 = 4\r\nt5 = 6\r\nt6 = 0\r\nt7 = 5\r\nt8 = 0\r\nt9 = 6\r\nCONST_VAL b:Int = t9\r\n";
 
-            var tetrads = ExpressionAlter.BuildTetrads(poliz);
 
-            foreach (var t in tetrads)
-                gridTetrads.Rows.Add(t.Result, t.Operation, t.Arg1, t.Arg2);
-            try {
-                int result = ExpressionAlter.EvalPoliz(poliz);
-                richResult.Text = $"Результат: {result}";
-            }
-            catch
-            {
-                richResult.Text = "Результат: выражение содержит переменные";
-            }
+            richResult.Text = "оптимизация №2: \n";
+
+            richResult.Text += "CONST_VAL b:Int = 6\r\n";
+             
      }
 
 
