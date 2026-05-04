@@ -783,6 +783,9 @@ CONST_VAL id:Int = t21
 ```
 CONST_VAL id:Int = t21
 ```
+## Тестовые примеры двух типов оптимизаций:
+![Пример](images/opt1.png)
+![Пример](images/opt2.png)
 > Оптимизация №3: Канонизация:
 ```
 CONST_VAL id:Int = t21 => const val id:Int = 3
